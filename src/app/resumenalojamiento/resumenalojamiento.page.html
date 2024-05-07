@@ -1,0 +1,104 @@
+<ion-header [translucent]="true"  >
+  <ion-toolbar  color="primary">
+    <ion-buttons slot="start">
+    <img src="../../assets/logotravel.png" />
+    <ion-button size="large" routerLink="/mensajes">
+      <ion-icon slot="icon-only" ios="mail" md="settings-sharp"></ion-icon>
+    </ion-button>
+    <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    
+  </ion-toolbar>
+</ion-header>
+
+  <div id="container">
+    <section class="maintitle  flexhor paddinghor"> 
+      <div>
+         <h1>Total del viaje</h1>
+         <h6>USD $1.234</h6>
+      </div>
+      <div>
+        <ion-button size="large"  routerLink="/buscaractividades">
+          <ion-icon slot="icon-only" ios="arrow-back" md="settings-sharp"></ion-icon>
+        </ion-button>
+      </div>
+    </section>
+    <section class="paddinghor topborder flexhor nomarginp">    
+      <p>Precio por persona</p>
+      <p>USD $250.000</p>
+    </section> 
+    <section class="paddinghor flexhor nomarginp">    
+      <p>Fecha del viaje</p>
+      <p>14/12/2023 - 30/12/2023</p>
+    </section> 
+  </div> 
+<ion-content [fullscreen]="true"> 
+  <section class="resumen">
+    <div class="resumentitle">
+      <ion-icon  ios="business" md="settings-sharp"></ion-icon>
+      <h3>Alojamientos</h3>
+    </div>
+    <div> 
+       <h5>Hotel Raddison. <br>63 O'Connell Tce. Bowen Hills QLD 4006</h5>
+       <table>
+        <tr>
+          <td>
+            <p>Habitacion doble con bano compartido <br>
+              2 camas dobles <br>
+              Cancelacion gratuita <br>
+              7 noches , 4 adultos</p>
+          </td>
+          <td>
+            <h6>USD $96</h6>
+            <h6>TOTAL USD $356</h6>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14158.645028067156!2d153.02190989255905!3d-27.47980336109698!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b915a3d0536e597%3A0x9b11c77f9942890e!2sThe%20Wellington%20Apartment%20Hotel!5e0!3m2!1ses-419!2sau!4v1714962399950!5m2!1ses-419!2sau" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </td>
+          <td>
+            <img src="../../assets/hotel.png"/>
+          </td>
+        </tr>
+       </table>
+      
+    </div>
+  </section>
+</ion-content>
+
+
+
+ 
+<section class="submenu"> 
+  <div>
+    <ion-button  routerLink="/resumenamigos" expand="full">
+      <ion-icon name="people"></ion-icon>
+      
+    </ion-button></div>
+  <div>
+    <ion-button routerLink="/resumenalojamiento"expand="full">
+      <ion-icon name="business"></ion-icon>
+      
+    </ion-button></div>
+  <div>
+    <ion-button routerLink="/resumenvuelos"expand="full">
+      <ion-icon name="airplane"></ion-icon>
+      
+    </ion-button></div>
+  <div>
+    <ion-button routerLink="/resumenactividades"expand="full">
+      <ion-icon name="balloon"></ion-icon>
+      
+    </ion-button></div>
+  <div>
+    <ion-button routerLink="/resumenrestaurantes"expand="full">
+      <ion-icon name="restaurant"></ion-icon>
+      
+    </ion-button></div>
+  <div>
+    <ion-button routerLink="/resumentransporte"expand="full">
+      <ion-icon name="bus"></ion-icon>
+      
+    </ion-button> </div>
+</section>

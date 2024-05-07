@@ -1,0 +1,109 @@
+<ion-header [translucent]="true"  >
+  <ion-toolbar  color="primary">
+    <ion-buttons slot="start">
+    <img src="../../assets/logotravel.png" />
+    <ion-button size="large" routerLink="/mensajes">
+      <ion-icon slot="icon-only" ios="mail" md="settings-sharp"></ion-icon>
+    </ion-button>
+    <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true"> 
+
+  <div id="container">
+   
+    <section class="paddinghor  "> 
+      <div class="flexhor sectionTitle">
+        <div>
+          <h2>Destinos populares</h2> 
+        </div> 
+      </div>
+      <div>
+        <section class="paddinghor  ">  
+          <div   >
+            <ion-list>
+              <ion-item class="bgwhite">
+                <ion-select label="Continente" label-placement="Floating " placeholder="Continente">
+                  <ion-select-option value="conti1">Asia</ion-select-option>
+                  <ion-select-option value="conti3">America</ion-select-option>
+                  <ion-select-option value="conti3">Europa</ion-select-option>
+                  <ion-select-option value="conti3">Africa</ion-select-option>
+                  <ion-select-option value="conti3">Oceania</ion-select-option>
+                </ion-select>
+              </ion-item>
+            
+              <ion-item class="bgwhite">
+                <ion-select label="Pais" label-placement="Floating " placeholder="Pais">
+                  <ion-select-option value="pais1">Pais 1</ion-select-option>
+                  <ion-select-option value="pais2">Pais 2</ion-select-option>
+                  <ion-select-option value="pais3">Pais 3</ion-select-option>
+                </ion-select>
+              </ion-item>
+            
+              <ion-item class="bgwhite">
+                <ion-select label="Region" label-placement="Floating " placeholder="Region">
+                  <ion-select-option value="reg1">I</ion-select-option>
+                  <ion-select-option value="reg2">II</ion-select-option>
+                  <ion-select-option value="reg3">III</ion-select-option>
+                </ion-select>
+              </ion-item> 
+            </ion-list>
+          </div> 
+          <div class="results"> 
+            <table>
+              <thead>
+                <tr>
+                  <th>Ciudad</th>
+                  <th>Costo</th>
+                  <th>Valoracion</th>
+                  <th> </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Cancun 1</td>
+                  <td>$$$$$</td>
+                  <td>    
+                    ★★★☆☆         
+                  </td>
+                  <td>                              
+                    <ion-button size="large" color="default">
+                      <ion-icon slot="icon-only" ios="eye" md="settings-sharp"></ion-icon>
+                    </ion-button>
+                  </td>   
+                </tr> 
+                <tr>
+                  <td>Cancun 1</td>
+                  <td>$$$</td>
+                  <td>    
+                    ★☆☆☆☆         
+                  </td>
+                  <td>                              
+                    <ion-button size="large" color="default">
+                      <ion-icon slot="icon-only" ios="eye" md="settings-sharp"></ion-icon>
+                    </ion-button>
+                  </td>   
+                </tr> 
+                <tr>
+                  <td>Cancun 1</td>
+                  <td>$</td>
+                  <td>    
+                    ★★☆☆☆         
+                  </td>
+                  <td>                              
+                    <ion-button size="large" color="default">
+                      <ion-icon slot="icon-only" ios="eye" md="settings-sharp"></ion-icon>
+                    </ion-button>
+                  </td>   
+                </tr> 
+              </tbody>
+            </table>   
+          </div>
+        </section> 
+      </div>
+    </section>
+  </div>
+</ion-content>

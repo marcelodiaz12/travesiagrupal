@@ -1,0 +1,14 @@
+
+.mensajes.topborder {
+    padding: 0;
+    border-radius: 0;
+    table {
+        border-radius: 0;
+        tr {
+            box-shadow: 0 0 3px rgb(0 0 0 / 24%);
+        }
+        td {
+            padding:10px
+        }
+    }
+  }

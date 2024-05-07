@@ -1,0 +1,80 @@
+<ion-header [translucent]="true"  >
+  <ion-toolbar  color="primary">
+    <ion-buttons slot="start">
+    <img src="../../assets/logotravel.png" />
+    <ion-button size="large" routerLink="/mensajes">
+      <ion-icon slot="icon-only" ios="mail" md="settings-sharp"></ion-icon>
+    </ion-button>
+    <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true"> 
+
+  <div id="container">
+   
+    <section class="paddinghor  "> 
+      <div class="flexhor sectionTitle">
+        <div>
+          <h2>Alojamientos con ofertas</h2> 
+        </div> 
+      </div>
+      <div>
+        <section class="paddinghor  ">   
+          <div class="results"> 
+            <table>
+              <thead>
+                <tr>
+                  <th>Ciudad</th>
+                  <th>Costo</th>
+                  <th>Valoracion</th>
+                  <th> </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Cancun 1</td>
+                  <td>$$$$$</td>
+                  <td>    
+                    ★★★☆☆         
+                  </td>
+                  <td>                              
+                    <ion-button size="large" color="default">
+                      <ion-icon slot="icon-only" ios="eye" md="settings-sharp"></ion-icon>
+                    </ion-button>
+                  </td>   
+                </tr> 
+                <tr>
+                  <td>Cancun 1</td>
+                  <td>$$$</td>
+                  <td>    
+                    ★☆☆☆☆         
+                  </td>
+                  <td>                              
+                    <ion-button size="large" color="default">
+                      <ion-icon slot="icon-only" ios="eye" md="settings-sharp"></ion-icon>
+                    </ion-button>
+                  </td>   
+                </tr> 
+                <tr>
+                  <td>Cancun 1</td>
+                  <td>$</td>
+                  <td>    
+                    ★★☆☆☆         
+                  </td>
+                  <td>                              
+                    <ion-button size="large" color="default">
+                      <ion-icon slot="icon-only" ios="eye" md="settings-sharp"></ion-icon>
+                    </ion-button>
+                  </td>   
+                </tr> 
+              </tbody>
+            </table>   
+          </div>
+        </section> 
+      </div>
+    </section>
+  </div>
+</ion-content>

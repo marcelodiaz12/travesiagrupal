@@ -1,0 +1,347 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "@ionic/angular/css/normalize.css";
+@import "@ionic/angular/css/structure.css";
+@import "@ionic/angular/css/typography.css";
+@import "@ionic/angular/css/display.css";
+
+/* Optional CSS utils that can be commented out */
+@import "@ionic/angular/css/padding.css";
+@import "@ionic/angular/css/float-elements.css";
+@import "@ionic/angular/css/text-alignment.css";
+@import "@ionic/angular/css/text-transformation.css";
+@import "@ionic/angular/css/flex-utils.css";
+
+/**
+ * Ionic Dark Mode
+ * -----------------------------------------------------
+ * For more info, please see:
+ * https://ionicframework.com/docs/theming/dark-mode
+ */
+
+/* @import "@ionic/angular/css/palettes/dark.always.css"; */
+/* @import "@ionic/angular/css/palettes/dark.class.css"; */
+@import "@ionic/angular/css/palettes/dark.system.css";
+
+ 
+
+  #background-content {
+    left: 0px;
+    right: 0px;
+    top: calc(var(--offset-top)* -1);
+    bottom: calc(var(--offset-bottom)* -1);
+    position: absolute;
+    background: var(--background);
+}
+:root {
+	--ion-color-primary: #032139;
+	--ion-color-primary-rgb: 3,33,57;
+	--ion-color-primary-contrast: #ffffff;
+	--ion-color-primary-contrast-rgb: 255,255,255;
+	--ion-color-primary-shade: #031d32;
+	--ion-color-primary-tint: #1c374d;
+
+	--ion-color-secondary: #A5D8EA;
+	--ion-color-secondary-rgb: 165,216,234;
+	--ion-color-secondary-contrast: #000000;
+	--ion-color-secondary-contrast-rgb: 0,0,0;
+	--ion-color-secondary-shade: #91bece;
+	--ion-color-secondary-tint: #aedcec;
+
+	--ion-color-tertiary: #237495;
+	--ion-color-tertiary-rgb: 35,116,149;
+	--ion-color-tertiary-contrast: #ffffff;
+	--ion-color-tertiary-contrast-rgb: 255,255,255;
+	--ion-color-tertiary-shade: #1f6683;
+	--ion-color-tertiary-tint: #3982a0;
+
+	--ion-color-success: #2dd55b;
+	--ion-color-success-rgb: 45,213,91;
+	--ion-color-success-contrast: #000000;
+	--ion-color-success-contrast-rgb: 0,0,0;
+	--ion-color-success-shade: #28bb50;
+	--ion-color-success-tint: #42d96b;
+
+	--ion-color-warning: #ffc409;
+	--ion-color-warning-rgb: 255,196,9;
+	--ion-color-warning-contrast: #000000;
+	--ion-color-warning-contrast-rgb: 0,0,0;
+	--ion-color-warning-shade: #e0ac08;
+	--ion-color-warning-tint: #ffca22;
+
+	--ion-color-danger: #F44336;
+	--ion-color-danger-rgb: 244,67,54;
+	--ion-color-danger-contrast: #000000;
+	--ion-color-danger-contrast-rgb: 0,0,0;
+	--ion-color-danger-shade: #d73b30;
+	--ion-color-danger-tint: #f5564a;
+
+	--ion-color-light: #f6f8fc;
+	--ion-color-light-rgb: 246,248,252;
+	--ion-color-light-contrast: #000000;
+	--ion-color-light-contrast-rgb: 0,0,0;
+	--ion-color-light-shade: #d8dade;
+	--ion-color-light-tint: #f7f9fc;
+
+	--ion-color-medium: #5f5f5f;
+	--ion-color-medium-rgb: 95,95,95;
+	--ion-color-medium-contrast: #ffffff;
+	--ion-color-medium-contrast-rgb: 255,255,255;
+	--ion-color-medium-shade: #545454;
+	--ion-color-medium-tint: #6f6f6f;
+
+	--ion-color-dark: #2f2f2f;
+	--ion-color-dark-rgb: 47,47,47;
+	--ion-color-dark-contrast: #ffffff;
+	--ion-color-dark-contrast-rgb: 255,255,255;
+	--ion-color-dark-shade: #292929;
+	--ion-color-dark-tint: #444444;
+
+}
+ion-menu.ios ion-item ion-icon {
+    color:#fff !important;
+    stroke: #fff;
+    fill: #fff;
+}
+/* Set variables for all modes */
+:root {
+    /* Set the background of the entire app */
+    --ion-background-color:  transparent;
+  
+    /* Set the font family of the entire app */
+    --ion-font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Roboto', sans-serif;
+  }
+  
+  /* Set text color of the entire app for iOS only */
+  :root.ios {
+    --ion-text-color: #000;
+  }
+  
+  /* Set text color of the entire app for Material Design only */
+  :root.md {
+    --ion-text-color: #222;
+  }
+
+  html {
+    
+    background:  url('../src/assets/htmlbg.svg') 0 0 / cover;
+  }
+  ion-list-header, ion-note,
+  ion-list#labels-list ion-label{
+    color:#fff !important;
+  }
+  ion-list#inbox-list ion-label {
+    color:#fff; 
+}
+ion-menu  ion-content   {
+
+    background: #032139;
+}
+ion-menu-button, 
+ion-button { 
+
+    --color: #fff;
+ 
+}
+ 
+.flexhor {
+    display: flex;    
+    justify-content: space-between;
+}
+h1,h2,h3,h4,h5,h6 {
+    margin: 0;
+}
+section.profile.flexhor {
+    align-items: center;
+    text-align: left;
+    color: #ABDBE9;
+    p {
+        color:#ABDBE9 !important;
+    }
+}
+.paddinghor {
+    padding:0 20px;
+}
+
+h2 {
+    color:#ABDBE9;
+}
+.sectionTitle {
+    align-items: center;
+    padding-bottom: 20px;
+}
+.topborder {
+    border-top:2px groove #032139;
+    padding-top:20px;
+    margin-top:20px;
+}
+table {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    overflow: hidden;
+    tr {
+        th {
+            background-color: #032139;
+            color: #ABDBE9;
+            padding:10px;
+        }
+        td { 
+            background-color: #A5D8EA;
+            color:#032139;
+            ion-button {
+                --color:#032139;
+                padding: 0;
+                height: 0;
+                min-width: unset;
+                min-height: 17px;
+            }
+        }
+    }
+}
+.maintitle {
+    align-items: center;
+    padding-top:20px;
+    h1 {
+        color:#ABDBE9;
+    }
+}
+.conversacion {
+    div {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        img {                    
+            height: 60px;
+        }
+        p {
+            margin:0;
+            background: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            width: 80%;
+        }
+    }
+}
+ion-item.bgwhite {
+    background-color: #fff;
+    border-radius: 5px;
+   margin-bottom:20px;
+}
+.results {
+    
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    .button {
+        margin:20px 0;
+    }
+    td {
+        padding:10px;
+        .button {
+            margin: 0;
+        }
+    }
+}
+
+.nomarginp p {
+    margin:0;
+    color:#ABDBE9;
+}
+ 
+.frienditem {
+    position: relative;
+    float: left;
+    width: 33%;
+    ion-badge {   
+        right: 0;
+        position: absolute;
+        padding: 5px;
+        border-radius: 40px;
+        font-size: 25px;
+        height: 40px;
+        width: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+.frienditem2 {
+    display: flex;
+    margin-bottom:10px;
+    justify-content: space-between;
+    img {
+        width: 60px;
+    }
+}
+
+.resumen {
+    background-color: #A5D8EA;  
+    margin: 20px;
+    border-radius: 20px;
+    float: left;
+    width: calc(100% - 40px);
+    p {
+        margin:0;
+    }
+    > div {
+        padding: 20px;
+    }
+    .resumentitle {
+        display: flex;  
+        align-items: center;
+        border-bottom: 1px solid;
+        ion-icon {
+            margin-right:20px;
+            width: 30px;
+            height: 30px;
+        }
+    }
+}
+
+.submenu {
+    display: flex;
+    div {
+        width: calc(100% / 6);
+    }
+    ion-button { 
+        margin: 0;
+    } 
+}
+
+.login {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px 0 0 0;
+    align-items: center;
+    justify-content: center;
+    ion-item {
+        background-color: #fff;
+        width: 100%;
+        margin: 20px;
+        border-radius: 10px;
+    }
+    img {
+        width: 200px;
+
+    }
+}

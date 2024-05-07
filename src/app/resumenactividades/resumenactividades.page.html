@@ -1,0 +1,107 @@
+<ion-header [translucent]="true"  >
+  <ion-toolbar  color="primary">
+    <ion-buttons slot="start">
+    <img src="../../assets/logotravel.png" />
+    <ion-button size="large" routerLink="/mensajes">
+      <ion-icon slot="icon-only" ios="mail" md="settings-sharp"></ion-icon>
+    </ion-button>
+    <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    
+  </ion-toolbar>
+</ion-header>
+
+  <div id="container">
+    <section class="maintitle  flexhor paddinghor"> 
+      <div>
+         <h1>Total del viaje</h1>
+         <h6>USD $1.234</h6>
+      </div>
+      <div>
+        <ion-button size="large"  routerLink="/buscaractividades">
+          <ion-icon slot="icon-only" ios="arrow-back" md="settings-sharp"></ion-icon>
+        </ion-button>
+      </div>
+    </section>
+    <section class="paddinghor topborder flexhor nomarginp">    
+      <p>Precio por persona</p>
+      <p>USD $250.000</p>
+    </section> 
+    <section class="paddinghor flexhor nomarginp">    
+      <p>Fecha del viaje</p>
+      <p>14/12/2023 - 30/12/2023</p>
+    </section> 
+  </div> 
+<ion-content [fullscreen]="true"> 
+  <section class="resumen"> 
+      <div class="resumentitle">
+        <ion-icon  ios="balloon" md="settings-sharp"></ion-icon>
+        <h3>Actividades</h3>
+      </div>
+      <div>
+        <table>
+          <tr>
+            <td>Dia 1</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Playa azul</td>
+            <td>$120 </td>
+          </tr>
+          <tr>
+            <td>Fiesta latina</td>
+            <td> $42</td>
+          </tr>
+          <tr>
+            <td>Teatro libre</td>
+            <td>$53</td>
+          </tr>
+          <tr>
+            <td>Tour Cuevas</td>
+            <td>$101</td>
+          </tr>
+          <tr>
+            <td>Total</td>
+            <td>USD $3976</td>
+          </tr>
+        </table>
+         
+      </div> 
+  </section>
+</ion-content>
+
+
+ 
+ 
+<section class="submenu"> 
+  <div>
+    <ion-button  routerLink="/resumenamigos" expand="full">
+      <ion-icon name="people"></ion-icon>
+      
+    </ion-button></div>
+  <div>
+    <ion-button routerLink="/resumenalojamiento"expand="full">
+      <ion-icon name="business"></ion-icon>
+      
+    </ion-button></div>
+  <div>
+    <ion-button routerLink="/resumenvuelos"expand="full">
+      <ion-icon name="airplane"></ion-icon>
+      
+    </ion-button></div>
+  <div>
+    <ion-button routerLink="/resumenactividades"expand="full">
+      <ion-icon name="balloon"></ion-icon>
+      
+    </ion-button></div>
+  <div>
+    <ion-button routerLink="/resumenrestaurantes"expand="full">
+      <ion-icon name="restaurant"></ion-icon>
+      
+    </ion-button></div>
+  <div>
+    <ion-button routerLink="/resumentransporte"expand="full">
+      <ion-icon name="bus"></ion-icon>
+      
+    </ion-button> </div>
+</section>

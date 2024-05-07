@@ -1,0 +1,112 @@
+<ion-header [translucent]="true"  >
+  <ion-toolbar  color="primary">
+    <ion-buttons slot="start">
+    <img src="../../assets/logotravel.png" />
+    <ion-button size="large" routerLink="/mensajes">
+      <ion-icon slot="icon-only" ios="mail" md="settings-sharp"></ion-icon>
+    </ion-button>
+    <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true"> 
+
+  <div id="container">
+    <section class="maintitle  flexhor paddinghor"> 
+      <div>
+         <h1>Buscar alojamiento</h1>
+      </div>
+      <div>
+        <ion-button size="large"  routerLink="/buscarvuelos">
+          <ion-icon slot="icon-only" ios="arrow-back" md="settings-sharp"></ion-icon>
+        </ion-button>
+      </div>
+    </section>
+    <section class="paddinghor topborder">   
+      <div class="results">  
+        
+        <table>
+          <thead>
+            <tr>
+              <th>Aerolinea</th>
+              <th>Salida</th>
+              <th>Llegada</th>
+              <th> </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Qantas</td>
+              <td>12/02/2020</td>
+              <td>12/02/2020</td>
+              <td>                              
+                <ion-button size="large" color="default">
+                  <ion-icon slot="icon-only" ios="eye" md="settings-sharp"></ion-icon>
+                </ion-button>
+              </td>   
+            </tr>  
+            <tr>
+              <td>Qantas</td>
+              <td>12/02/2020</td>
+              <td>12/02/2020</td>
+              <td>                              
+                <ion-button size="large" color="default">
+                  <ion-icon slot="icon-only" ios="eye" md="settings-sharp"></ion-icon>
+                </ion-button>
+              </td>   
+            </tr>  
+            <tr>
+              <td>Qantas</td>
+              <td>12/02/2020</td>
+              <td>12/02/2020</td>
+              <td>                              
+                <ion-button size="large" color="default">
+                  <ion-icon slot="icon-only" ios="eye" md="settings-sharp"></ion-icon>
+                </ion-button>
+              </td>   
+            </tr> 
+            <tr>
+              <td>Qantas</td>
+              <td>12/02/2020</td>
+              <td>12/02/2020</td>
+              <td>                              
+                <ion-button size="large" color="default">
+                  <ion-icon slot="icon-only" ios="eye" md="settings-sharp"></ion-icon>
+                </ion-button>
+              </td>   
+            </tr> 
+            <tr>
+              <td>Qantas</td>
+              <td>12/02/2020</td>
+              <td>12/02/2020</td>
+              <td>                              
+                <ion-button size="large" color="default">
+                  <ion-icon slot="icon-only" ios="eye" md="settings-sharp"></ion-icon>
+                </ion-button>
+              </td>   
+            </tr> 
+            <tr>
+              <td>Qantas</td>
+              <td>12/02/2020</td>
+              <td>12/02/2020</td>
+              <td>                              
+                <ion-button size="large" color="default">
+                  <ion-icon slot="icon-only" ios="eye" md="settings-sharp"></ion-icon>
+                </ion-button>
+              </td>   
+            </tr>  
+          </tbody>
+        </table>  
+        <ion-button color="secondary"   routerLink="/buscaractividades">Buscar actividades</ion-button>
+      </div>
+    </section> 
+  </div>
+</ion-content>
+
+   <ion-modal [keepContentsMounted]="true">
+              <ng-template>
+                <ion-datetime id="datetime"></ion-datetime>
+              </ng-template>
+            </ion-modal>

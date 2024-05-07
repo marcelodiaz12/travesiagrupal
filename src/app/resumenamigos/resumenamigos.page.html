@@ -1,0 +1,106 @@
+<ion-header [translucent]="true"  >
+  <ion-toolbar  color="primary">
+    <ion-buttons slot="start">
+    <img src="../../assets/logotravel.png" />
+    <ion-button size="large" routerLink="/mensajes">
+      <ion-icon slot="icon-only" ios="mail" md="settings-sharp"></ion-icon>
+    </ion-button>
+    <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    
+  </ion-toolbar>
+</ion-header>
+
+  <div id="container">
+    <section class="maintitle  flexhor paddinghor"> 
+      <div>
+         <h1>Total del viaje</h1>
+         <h6>USD $1.234</h6>
+      </div>
+      <div>
+        <ion-button size="large"  routerLink="/buscaractividades">
+          <ion-icon slot="icon-only" ios="arrow-back" md="settings-sharp"></ion-icon>
+        </ion-button>
+      </div>
+    </section>
+    <section class="paddinghor topborder flexhor nomarginp">    
+      <p>Precio por persona</p>
+      <p>USD $250.000</p>
+    </section> 
+    <section class="paddinghor flexhor nomarginp">    
+      <p>Fecha del viaje</p>
+      <p>14/12/2023 - 30/12/2023</p>
+    </section> 
+  </div> 
+<ion-content [fullscreen]="true"> 
+  <section class="resumen">
+    <div class="resumentitle">
+      <ion-icon  ios="people" md="settings-sharp"></ion-icon>
+      <h3>4 personas</h3>
+    </div>
+    <div>
+      <div class="frienditem">
+        <ion-badge slot="start">
+          <ion-icon name="trash" aria-hidden="true"></ion-icon>              
+        </ion-badge>
+        <img src="../../assets/user.png" />
+      </div> 
+      <div class="frienditem">
+        <ion-badge slot="start">
+          <ion-icon name="trash" aria-hidden="true"></ion-icon>              
+        </ion-badge>
+        <img src="../../assets/user2.png" />
+      </div> 
+      <div class="frienditem">
+        <ion-badge slot="start">
+          <ion-icon name="trash" aria-hidden="true"></ion-icon>              
+        </ion-badge>
+        <img src="../../assets/user3.png" />
+      </div> 
+      <div class="frienditem">
+        <ion-badge slot="start">
+          <ion-icon name="trash" aria-hidden="true"></ion-icon>              
+        </ion-badge>
+        <img src="../../assets/user4.png" />
+      </div> 
+       
+    </div>
+  </section>
+</ion-content>
+
+
+ 
+
+ 
+<section class="submenu"> 
+  <div>
+    <ion-button  routerLink="/resumenamigos" expand="full">
+      <ion-icon name="people"></ion-icon>
+      
+    </ion-button></div>
+  <div>
+    <ion-button routerLink="/resumenalojamiento"expand="full">
+      <ion-icon name="business"></ion-icon>
+      
+    </ion-button></div>
+  <div>
+    <ion-button routerLink="/resumenvuelos"expand="full">
+      <ion-icon name="airplane"></ion-icon>
+      
+    </ion-button></div>
+  <div>
+    <ion-button routerLink="/resumenactividades"expand="full">
+      <ion-icon name="balloon"></ion-icon>
+      
+    </ion-button></div>
+  <div>
+    <ion-button routerLink="/resumenrestaurantes"expand="full">
+      <ion-icon name="restaurant"></ion-icon>
+      
+    </ion-button></div>
+  <div>
+    <ion-button routerLink="/resumentransporte"expand="full">
+      <ion-icon name="bus"></ion-icon>
+      
+    </ion-button> </div>
+</section>

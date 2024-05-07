@@ -1,0 +1,7 @@
+{
+  "name": "travesiagrupal",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
