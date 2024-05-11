@@ -11,5 +11,10 @@ export class PlanearviajePage implements OnInit {
 
   ngOnInit() {
   }
+ 
 
+  toggleIconName(event: any) {
+    const icon = event.target;
+    icon.name = icon.name === 'add' ? 'close' : 'add';
+  }
 }

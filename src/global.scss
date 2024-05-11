@@ -43,8 +43,7 @@
     right: 0px;
     top: calc(var(--offset-top)* -1);
     bottom: calc(var(--offset-bottom)* -1);
-    position: absolute;
-    background: var(--background);
+    position: absolute; 
 }
 :root {
 	--ion-color-primary: #032139;
@@ -136,8 +135,8 @@ ion-menu.ios ion-item ion-icon {
   }
 
   html {
-    
-    background:  url('../src/assets/htmlbg.svg') 0 0 / cover;
+     
+    background-color: #1f6683;
   }
   ion-list-header, ion-note,
   ion-list#labels-list ion-label{
@@ -250,11 +249,13 @@ ion-item.bgwhite {
         margin:20px 0;
     }
     td {
-        padding:10px;
+        padding:3px;
         .button {
             margin: 0;
         }
+    
     }
+
 }
 
 .nomarginp p {
@@ -344,4 +345,67 @@ ion-item.bgwhite {
         width: 200px;
 
     }
+}
+
+.detail {
+    display: none;
+    transition: 0.5s ease all;  
+    &.active {
+        display: table-row;
+    }
+    td {
+        
+    font-size: 11px;
+    background: #fff;
+    }
+}
+#container {
+    position: relative;
+    z-index: 3;
+}
+ion-radio::part(container) {
+    width: 30px;
+    height: 30px;
+  
+    border-radius: 8px;
+    border: 2px solid #ddd;
+  }
+  
+  ion-radio::part(mark) {
+    background: none;
+    transition: none;
+    transform: none;
+    border-radius: 0;
+  }
+  
+  ion-radio.radio-checked::part(container) {
+    background: #6815ec;
+    border-color: transparent;
+  }
+  
+  ion-radio.radio-checked::part(mark) {
+    width: 6px;
+    height: 10px;
+  
+    border-width: 0px 2px 2px 0px;
+    border-style: solid;
+    border-color: #fff;
+  
+    transform: rotate(45deg);
+  }
+
+  .show-modal {
+    background-color: #fff;
+  }
+  .voting {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+.inputext {    
+    background: #fff;
+    display: flex;
+    padding: 10px;
+    box-shadow: 0 0 10px;
+    position: relative;
 }

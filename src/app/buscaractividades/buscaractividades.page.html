@@ -26,81 +26,96 @@
     </section>
     <section class="paddinghor topborder">   
       <div class="results">  
-        
+        <ion-radio-group value="strawberries"  [(ngModel)]="isRadioButtonSelected">        
         <table>
           <thead>
             <tr>
-              <th>Aerolinea</th>
-              <th>Salida</th>
-              <th>Llegada</th>
+              <th> </th>
+              <th>Actividad</th>
+              <th>Precio</th>
+              <th>Valor</th>
               <th> </th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>Qantas</td>
-              <td>12/02/2020</td>
-              <td>12/02/2020</td>
-              <td>                              
-                <ion-button size="large" color="default">
-                  <ion-icon slot="icon-only" ios="eye" md="settings-sharp"></ion-icon>
-                </ion-button>
+              <td>
+                <ion-radio></ion-radio>
+              </td>
+              <td>Paseo</td> 
+              <td>$$</td>
+              <td>    
+                ★★★★★         
+              </td>
+              <td>                            
+                <ion-button size="large" color="default"  (click)="toggleDetail($event)">
+                  <ion-icon slot="icon-only"  ios="eye" md="settings-sharp"></ion-icon>
+                </ion-button> 
               </td>   
             </tr>  
-            <tr>
-              <td>Qantas</td>
-              <td>12/02/2020</td>
-              <td>12/02/2020</td>
-              <td>                              
-                <ion-button size="large" color="default">
-                  <ion-icon slot="icon-only" ios="eye" md="settings-sharp"></ion-icon>
-                </ion-button>
-              </td>   
-            </tr>  
-            <tr>
-              <td>Qantas</td>
-              <td>12/02/2020</td>
-              <td>12/02/2020</td>
-              <td>                              
-                <ion-button size="large" color="default">
-                  <ion-icon slot="icon-only" ios="eye" md="settings-sharp"></ion-icon>
-                </ion-button>
+            <tr class="detail">
+              <td colspan="5"> 
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis condimentum turpis. 
+                  Maecenas vel massa varius purus sodales lobortis. Cras laoreet odio et aliquam finibus. 
+                  Suspendisse faucibus egestas placerat. Nunc vel nisl cursus, pharetra leo sit amet, pulvinar massa. 
+                  Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. 
+                  Proin porttitor dui massa, non malesuada nisi luctus eu. Nunc eget tortor sed magna ultricies pretium at fermentum purus.</p> 
               </td>   
             </tr> 
             <tr>
-              <td>Qantas</td>
-              <td>12/02/2020</td>
-              <td>12/02/2020</td>
-              <td>                              
-                <ion-button size="large" color="default">
-                  <ion-icon slot="icon-only" ios="eye" md="settings-sharp"></ion-icon>
-                </ion-button>
-              </td>   
-            </tr> 
-            <tr>
-              <td>Qantas</td>
-              <td>12/02/2020</td>
-              <td>12/02/2020</td>
-              <td>                              
-                <ion-button size="large" color="default">
-                  <ion-icon slot="icon-only" ios="eye" md="settings-sharp"></ion-icon>
-                </ion-button>
-              </td>   
-            </tr> 
-            <tr>
-              <td>Qantas</td>
-              <td>12/02/2020</td>
-              <td>12/02/2020</td>
-              <td>                              
-                <ion-button size="large" color="default">
-                  <ion-icon slot="icon-only" ios="eye" md="settings-sharp"></ion-icon>
-                </ion-button>
+              <td>
+                <ion-radio></ion-radio>
+              </td>
+              <td>Fiesta</td> 
+              <td>$$$$$</td>
+              <td>    
+                ★★★★★         
+              </td>
+              <td>                            
+                <ion-button size="large" color="default"  (click)="toggleDetail($event)">
+                  <ion-icon slot="icon-only"  ios="eye" md="settings-sharp"></ion-icon>
+                </ion-button> 
               </td>   
             </tr>  
+            <tr class="detail">
+              <td colspan="5"> 
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis condimentum turpis. 
+                  Maecenas vel massa varius purus sodales lobortis. Cras laoreet odio et aliquam finibus. 
+                  Suspendisse faucibus egestas placerat. Nunc vel nisl cursus, pharetra leo sit amet, pulvinar massa. 
+                  Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. 
+                  Proin porttitor dui massa, non malesuada nisi luctus eu. Nunc eget tortor sed magna ultricies pretium at fermentum purus.</p> 
+              </td>   
+            </tr> 
+            <tr>
+              <td>
+                <ion-radio></ion-radio>
+              </td>
+              <td>Tour</td> 
+              <td>$$</td>
+              <td>    
+                ★★★★★         
+              </td>
+              <td>                            
+                <ion-button size="large" color="default"  (click)="toggleDetail($event)">
+                  <ion-icon slot="icon-only"  ios="eye" md="settings-sharp"></ion-icon>
+                </ion-button> 
+              </td>   
+            </tr>  
+            <tr class="detail">
+              <td colspan="5">  
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis condimentum turpis. 
+                  Maecenas vel massa varius purus sodales lobortis. Cras laoreet odio et aliquam finibus. 
+                  Suspendisse faucibus egestas placerat. Nunc vel nisl cursus, pharetra leo sit amet, pulvinar massa. 
+                  Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. 
+                  Proin porttitor dui massa, non malesuada nisi luctus eu. Nunc eget tortor sed magna ultricies pretium at fermentum purus.</p> 
+              </td>   
+            </tr> 
           </tbody>
         </table>  
-        <ion-button color="secondary"   routerLink="/totalviaje">Total del viaje</ion-button>
+      </ion-radio-group>
+      <ion-button color="secondary"    [disabled]="!isRadioButtonSelected"   routerLink="/totalviaje">Total del viaje</ion-button>  
       </div>
+          
     </section> 
   </div>
 </ion-content>

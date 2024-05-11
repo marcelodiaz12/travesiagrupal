@@ -26,80 +26,118 @@
     </section>
     <section class="paddinghor topborder">   
       <div class="results">  
-        
+        <ion-radio-group value="strawberries"  [(ngModel)]="isRadioButtonSelected">        
         <table>
           <thead>
             <tr>
-              <th>Aerolinea</th>
-              <th>Salida</th>
-              <th>Llegada</th>
+              <th> </th>
+              <th>Hotel</th>
+              <th>Precio</th>
+              <th>Valor</th>
               <th> </th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>Qantas</td>
-              <td>12/02/2020</td>
-              <td>12/02/2020</td>
-              <td>                              
-                <ion-button size="large" color="default">
-                  <ion-icon slot="icon-only" ios="eye" md="settings-sharp"></ion-icon>
-                </ion-button>
+              <td>
+                <ion-radio></ion-radio>
+              </td>
+              <td>Sheraton</td> 
+              <td>$$</td>
+              <td>    
+                ★★★★★         
+              </td>
+              <td>                            
+                <ion-button size="large" color="default"  (click)="toggleDetail($event)">
+                  <ion-icon slot="icon-only"  ios="eye" md="settings-sharp"></ion-icon>
+                </ion-button> 
               </td>   
             </tr>  
-            <tr>
-              <td>Qantas</td>
-              <td>12/02/2020</td>
-              <td>12/02/2020</td>
-              <td>                              
-                <ion-button size="large" color="default">
-                  <ion-icon slot="icon-only" ios="eye" md="settings-sharp"></ion-icon>
-                </ion-button>
-              </td>   
-            </tr>  
-            <tr>
-              <td>Qantas</td>
-              <td>12/02/2020</td>
-              <td>12/02/2020</td>
-              <td>                              
-                <ion-button size="large" color="default">
-                  <ion-icon slot="icon-only" ios="eye" md="settings-sharp"></ion-icon>
-                </ion-button>
+            <tr class="detail">
+              <td colspan="5"> 
+                
+                <img src="../../assets/hotel.png" width="150" height="auto" style="max-width: 150px;display: inline;float:left;" />
+                <p>Bed in 8-Bed Mixed Dormitory Room</p>
+                <p>1 bunk bed </p>
+                <p>16 m²BalconyPool viewLandmark viewCity viewInner courtyard viewAir conditioningPrivate bathroom</p>
+                <p>Shower Safety deposit box Toilet Towels Linen Socket near the bed Towels/sheets (extra fee) Carpeted Upper floors accessible by elevator Toilet paper</p>
+                <p>Sleeps: 1 - 1 guests</p>
+                <p>Price AUD 50</p>
+                <p>Includes taxes and charges</p>
+                <p>Includes 25% off food/drink+ late check-in</p>
+                <p>Non-refundable</p>
+                <p>Pay in advance</p> 
+                <p>Only 6 beds left on our site</p> 
               </td>   
             </tr> 
             <tr>
-              <td>Qantas</td>
-              <td>12/02/2020</td>
-              <td>12/02/2020</td>
-              <td>                              
-                <ion-button size="large" color="default">
-                  <ion-icon slot="icon-only" ios="eye" md="settings-sharp"></ion-icon>
-                </ion-button>
-              </td>   
-            </tr> 
-            <tr>
-              <td>Qantas</td>
-              <td>12/02/2020</td>
-              <td>12/02/2020</td>
-              <td>                              
-                <ion-button size="large" color="default">
-                  <ion-icon slot="icon-only" ios="eye" md="settings-sharp"></ion-icon>
-                </ion-button>
-              </td>   
-            </tr> 
-            <tr>
-              <td>Qantas</td>
-              <td>12/02/2020</td>
-              <td>12/02/2020</td>
-              <td>                              
-                <ion-button size="large" color="default">
-                  <ion-icon slot="icon-only" ios="eye" md="settings-sharp"></ion-icon>
-                </ion-button>
+              <td>
+                <ion-radio></ion-radio>
+              </td>
+              <td>Holliday Inn</td> 
+              <td>$$$$$</td>
+              <td>    
+                ★★★★★         
+              </td>
+              <td>                            
+                <ion-button size="large" color="default"  (click)="toggleDetail($event)">
+                  <ion-icon slot="icon-only"  ios="eye" md="settings-sharp"></ion-icon>
+                </ion-button> 
               </td>   
             </tr>  
+            <tr class="detail">
+              <td colspan="5"> 
+                
+                <img src="../../assets/hotel.png" width="150" height="auto" style="max-width: 150px;display: inline;float:left;" />
+                <p>Bed in 8-Bed Mixed Dormitory Room</p>
+                <p>1 bunk bed </p>
+                <p>16 m²BalconyPool viewLandmark viewCity viewInner courtyard viewAir conditioningPrivate bathroom</p>
+                <p>Shower Safety deposit box Toilet Towels Linen Socket near the bed Towels/sheets (extra fee) Carpeted Upper floors accessible by elevator Toilet paper</p>
+                <p>Sleeps: 1 - 1 guests</p>
+                <p>Price AUD 50</p>
+                <p>Includes taxes and charges</p>
+                <p>Includes 25% off food/drink+ late check-in</p>
+                <p>Non-refundable</p>
+                <p>Pay in advance</p> 
+                <p>Only 6 beds left on our site</p> 
+              </td>   
+            </tr> 
+            <tr>
+              <td>
+                <ion-radio></ion-radio>
+              </td>
+              <td>Ritz Carlton</td> 
+              <td>$$</td>
+              <td>    
+                ★★★★★         
+              </td>
+              <td>                            
+                <ion-button size="large" color="default"  (click)="toggleDetail($event)">
+                  <ion-icon slot="icon-only"  ios="eye" md="settings-sharp"></ion-icon>
+                </ion-button> 
+              </td>   
+            </tr>  
+            <tr class="detail">
+              <td colspan="5"> 
+                
+                <img src="../../assets/hotel.png" width="150" height="auto" style="max-width: 150px;display: inline;float:left;" />
+                <p>Bed in 8-Bed Mixed Dormitory Room</p>
+                <p>1 bunk bed </p>
+                <p>16 m²BalconyPool viewLandmark viewCity viewInner courtyard viewAir conditioningPrivate bathroom</p>
+                <p>Shower Safety deposit box Toilet Towels Linen Socket near the bed Towels/sheets (extra fee) Carpeted Upper floors accessible by elevator Toilet paper</p>
+                <p>Sleeps: 1 - 1 guests</p>
+                <p>Price AUD 50</p>
+                <p>Includes taxes and charges</p>
+                <p>Includes 25% off food/drink+ late check-in</p>
+                <p>Non-refundable</p>
+                <p>Pay in advance</p> 
+                <p>Only 6 beds left on our site</p> 
+              </td>   
+            </tr> 
           </tbody>
         </table>  
-        <ion-button color="secondary"   routerLink="/buscaractividades">Buscar actividades</ion-button>
+      </ion-radio-group>
+        <ion-button color="secondary"  [disabled]="!isRadioButtonSelected"   routerLink="/buscaractividades">Buscar actividades</ion-button>
       </div>
     </section> 
   </div>

@@ -1,0 +1,157 @@
+<ion-header [translucent]="true"  >
+  <ion-toolbar  color="primary">
+    <ion-buttons slot="start">
+    <img src="../../assets/logotravel.png" />
+    <ion-button size="large" routerLink="/mensajes">
+      <ion-icon slot="icon-only" ios="mail" md="settings-sharp"></ion-icon>
+    </ion-button>
+    <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true"> 
+
+  <div id="container">
+   
+    <section class="paddinghor  "> 
+      <div class="flexhor sectionTitle">
+        <div>
+          <h2>Viaje a cancun</h2>  
+        </div> 
+        <div>
+          <ion-button size="large"  routerLink="/detalle">
+            <ion-icon slot="icon-only" ios="arrow-back" md="settings-sharp"></ion-icon>
+          </ion-button>
+        </div>
+      </div>
+      <div> 
+      <ion-radio-group value="strawberries">
+        <table class="voting">
+          <tr>
+            <th colspan="3">Vuelos</th> 
+          </tr>
+          <tr>
+              <td>
+                <ion-radio></ion-radio>
+              </td>  
+              <td>
+                <ion-radio></ion-radio>
+              </td> 
+              <td>
+                <ion-radio></ion-radio>
+              </td> 
+          </tr>
+          <tr>
+            <td>Qantas</td>  
+            <td>LAN</td> 
+            <td>JETSTAR</td> 
+          </tr>
+        </table>
+            </ion-radio-group>
+      </div>
+      <div> 
+        <ion-radio-group value="strawberries">
+        <table class="voting">
+          <tr>
+            <th colspan="3">Hoteles</th> 
+          </tr>
+          <tr>
+              <td>
+                <ion-radio></ion-radio>
+              </td>  
+              <td>
+                <ion-radio></ion-radio>
+              </td> 
+              <td>
+                <ion-radio></ion-radio>
+              </td> 
+          </tr>
+          <tr>
+            <td>Sheraton</td>  
+            <td>Ritz</td>    
+            <td>Holliday</td> 
+          </tr>
+        </table>
+      </ion-radio-group>
+      </div>
+      <div> 
+        <ion-radio-group value="strawberries">
+        <table class="voting">
+          <tr>
+            <th colspan="3">Actividades</th> 
+          </tr>
+          <tr>
+              <td>
+                <ion-radio></ion-radio>
+              </td>  
+              <td>
+                <ion-radio></ion-radio>
+              </td> 
+              <td>
+                <ion-radio></ion-radio>
+              </td> 
+          </tr>
+          <tr>
+            <td>Paseo</td>  
+            <td>Fiesta</td>  
+            <td>Tour</td> 
+          </tr>
+        </table>
+      </ion-radio-group>
+      </div>
+      <div> 
+        <ion-radio-group value="strawberries">
+        <table class="voting">
+          <tr>
+            <th colspan="3">Restaurantes</th> 
+          </tr>
+          <tr>
+              <td>
+                <ion-radio></ion-radio>
+              </td>  
+              <td>
+                <ion-radio></ion-radio>
+              </td> 
+              <td>
+                <ion-radio></ion-radio>
+              </td> 
+          </tr>
+          <tr>
+            <td>Rest 1</td>  
+            <td>Rest 2</td>  
+            <td>Rest 3</td> 
+          </tr>
+        </table>
+      </ion-radio-group>
+      </div>
+      <div> 
+        <ion-radio-group value="strawberries">
+        <table class="voting">
+          <tr>
+            <th colspan="3">Transporte</th> 
+          </tr>
+          <tr>
+              <td>
+                <ion-radio></ion-radio>
+              </td>  
+              <td>
+                <ion-radio></ion-radio>
+              </td> 
+              <td>
+                <ion-radio></ion-radio>
+              </td> 
+          </tr>
+          <tr>
+            <td>BUS</td>  
+            <td>BOTE</td>  
+            <td>CABALLO</td> 
+          </tr>
+        </table>
+      </ion-radio-group>
+      </div>
+      <ion-button color="secondary"  routerLink="/detalle">Votar</ion-button>
+    </section> 
+  </div>
+</ion-content>

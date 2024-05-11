@@ -35,31 +35,31 @@
 <ion-content [fullscreen]="true"> 
   <section class="resumen">
     <div class="resumentitle">
-      <ion-icon  ios="people" md="settings-sharp"></ion-icon>
+      <ion-icon  ios="people" md="settings-sharp" ></ion-icon>
       <h3>4 personas</h3>
     </div>
     <div>
       <div class="frienditem">
-        <ion-badge slot="start">
-          <ion-icon name="trash" aria-hidden="true"></ion-icon>              
+        <ion-badge slot="start" (click)="setOpen(true)">
+          <ion-icon name="trash" aria-hidden="true"  ></ion-icon>              
         </ion-badge>
         <img src="../../assets/user.png" />
       </div> 
       <div class="frienditem">
-        <ion-badge slot="start">
-          <ion-icon name="trash" aria-hidden="true"></ion-icon>              
+        <ion-badge slot="start" (click)="setOpen(true)">
+          <ion-icon name="trash" aria-hidden="true"  ></ion-icon>              
         </ion-badge>
         <img src="../../assets/user2.png" />
       </div> 
       <div class="frienditem">
-        <ion-badge slot="start">
-          <ion-icon name="trash" aria-hidden="true"></ion-icon>              
+        <ion-badge slot="start" (click)="setOpen(true)">
+          <ion-icon name="trash" aria-hidden="true"   ></ion-icon>              
         </ion-badge>
         <img src="../../assets/user3.png" />
       </div> 
       <div class="frienditem">
-        <ion-badge slot="start">
-          <ion-icon name="trash" aria-hidden="true"></ion-icon>              
+        <ion-badge slot="start"  (click)="setOpen(true)">
+          <ion-icon name="trash" aria-hidden="true"   ></ion-icon>              
         </ion-badge>
         <img src="../../assets/user4.png" />
       </div> 
@@ -102,3 +102,5 @@
         
       </ion-button> </div>
 </section>
+ 
+ 

@@ -39,71 +39,103 @@
         
           <ion-item class="bgwhite">
             <ion-select label="Pais" label-placement="Floating " placeholder="Pais">
-              <ion-select-option value="pais1">Pais 1</ion-select-option>
-              <ion-select-option value="pais2">Pais 2</ion-select-option>
-              <ion-select-option value="pais3">Pais 3</ion-select-option>
+              <ion-select-option value="pais1">Albania Indonesia
+                Alemania Irak
+              </ion-select-option> 
+              <ion-select-option value="pais1">Angola Irlanda (Eire)
+              </ion-select-option> 
+              <ion-select-option value="pais1">Antigua y Barbuda Islas Feroe
+              </ion-select-option> 
+              <ion-select-option value="pais1">Argentina Islas Vírgenes (Norteamericanas)
+              </ion-select-option> 
+              <ion-select-option value="pais1">Aruba Israel
+              </ion-select-option> 
+              <ion-select-option value="pais1">Australia Italia
+              </ion-select-option> 
+              <ion-select-option value="pais1">Bahamas Jamaica
+              </ion-select-option> 
             </ion-select>
           </ion-item>
-        
-          <ion-item class="bgwhite">
-            <ion-select label="Region" label-placement="Floating " placeholder="Region">
-              <ion-select-option value="reg1">I</ion-select-option>
-              <ion-select-option value="reg2">II</ion-select-option>
-              <ion-select-option value="reg3">III</ion-select-option>
-            </ion-select>
-          </ion-item> 
+         
         </ion-list>
       </div> 
       <div class="results"> 
-        <table>
-          <thead>
-            <tr>
-              <th>Ciudad</th>
-              <th>Costo</th>
-              <th>Valoracion</th>
-              <th> </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Cancun 1</td>
-              <td>$$$$$</td>
-              <td>    
-                ★★★☆☆         
-              </td>
-              <td>                              
-                <ion-button size="large" color="default">
-                  <ion-icon slot="icon-only" ios="eye" md="settings-sharp"></ion-icon>
-                </ion-button>
-              </td>   
-            </tr> 
-            <tr>
-              <td>Cancun 1</td>
-              <td>$$$</td>
-              <td>    
-                ★☆☆☆☆         
-              </td>
-              <td>                              
-                <ion-button size="large" color="default">
-                  <ion-icon slot="icon-only" ios="eye" md="settings-sharp"></ion-icon>
-                </ion-button>
-              </td>   
-            </tr> 
-            <tr>
-              <td>Cancun 1</td>
-              <td>$</td>
-              <td>    
-                ★★☆☆☆         
-              </td>
-              <td>                              
-                <ion-button size="large" color="default">
-                  <ion-icon slot="icon-only" ios="eye" md="settings-sharp"></ion-icon>
-                </ion-button>
-              </td>   
-            </tr> 
-          </tbody>
-        </table>  
-        <ion-button color="secondary"   routerLink="/planearviaje">Invitar amigos</ion-button>
+        <ion-radio-group value="strawberries"  [(ngModel)]="isRadioButtonSelected">
+          <table>
+            <thead>
+              <tr>
+                <th> </th>
+                <th>Ciudad</th>
+                <th>Costo</th>
+                <th>Valoracion</th>
+                <th> </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <ion-radio></ion-radio>
+                </td>
+                <td>Ciudad 1</td>
+                <td>$$$$$</td>
+                <td>    
+                  ★★★☆☆         
+                </td>
+                <td>                              
+                  <ion-button size="large" color="default"  (click)="toggleDetail($event)">
+                    <ion-icon slot="icon-only"  ios="eye" md="settings-sharp"></ion-icon>
+                  </ion-button>
+                </td>   
+              </tr>  
+              <tr class="detail">
+                <td colspan="5">
+                    <img src="../../assets/city.png" /> 
+                </td>   
+              </tr> 
+              <tr>
+                <td>
+                  <ion-radio></ion-radio>
+                </td>
+                <td>Ciudad 2</td>
+                <td>$$$$</td>
+                <td>    
+                  ★☆☆☆☆         
+                </td>
+                <td>                              
+                  <ion-button size="large" color="default"  (click)="toggleDetail($event)">
+                    <ion-icon slot="icon-only" ios="eye" md="settings-sharp"></ion-icon>
+                  </ion-button>
+                </td>   
+              </tr>  
+              <tr class="detail">
+                <td colspan="5">
+                    <img src="../../assets/city.png" /> 
+                </td>   
+              </tr> 
+              <tr>
+                <td>
+                  <ion-radio></ion-radio>
+                </td>
+                <td>Ciudad 3</td>
+                <td>$$</td>
+                <td>    
+                  ★★★★★         
+                </td>
+                <td>                              
+                  <ion-button size="large" color="default"  (click)="toggleDetail($event)">
+                    <ion-icon slot="icon-only"  ios="eye" md="settings-sharp"></ion-icon>
+                  </ion-button>
+                </td>   
+              </tr>  
+              <tr class="detail">
+                <td colspan="5">
+                    <img src="../../assets/city.png" /> 
+                </td>   
+              </tr>  
+            </tbody>
+          </table>  
+        </ion-radio-group>
+        <ion-button color="secondary" [disabled]="!isRadioButtonSelected"  routerLink="/planearviaje">Invitar amigos</ion-button>
       </div>
     </section> 
   </div>
