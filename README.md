@@ -52,3 +52,12 @@ Marcelo Diaz - Construcción de aplicación básica (parte B) - marcelodiaz12
 
 ### Licencia
 Este proyecto no está licenciado bajo ni nunguna licencia
+
+### Experiencia personal de aprendizaje
+
+Durante la creacion de este proyecto me encontre con los problemas normales
+que aparecen al aprender un lenguaje de programacion nuevo
+
+El tema del routing para linkear una pagina con otra me costo un poco entenderlo
+pero finalmente siguiendo el tutorial de la pagina de ionic pude ralizarlo sin mayores problemas.
+
