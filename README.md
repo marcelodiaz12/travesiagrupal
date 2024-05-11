@@ -10,13 +10,28 @@ Estas instrucciones le ayudarán a obtener una copia del proyecto y ejecutarlo e
 
 Cosas que necesitas instalar para ejecutar el software y cómo instalarlas:
 
-- Node.js
-- npm
-- Ionic CLI
+Node.js:
+
+Ve al sitio web oficial de Node.js: https://nodejs.org.
+Descarga la versión recomendada para tu sistema operativo (Windows, macOS o Linux).
+Sigue las instrucciones de instalación proporcionadas por el instalador.
+Para verificar que Node.js se instaló correctamente, abre una terminal (en Windows, puedes usar el símbolo del sistema o PowerShell) y escribe node -v. Deberías ver la versión de Node.js que acabas de instalar.
+npm (Node Package Manager):
+
+npm generalmente se instala automáticamente junto con Node.js.
+Para verificar que npm se instaló correctamente, abre una terminal y escribe npm -v. Deberías ver la versión de npm que se instaló.
+Ionic CLI:
+
+Una vez que tengas Node.js y npm instalados, puedes instalar Ionic CLI ejecutando el siguiente comando en tu terminal:
+
+bash
+Copy code
+npm install -g @ionic/cli
+Esto instalará Ionic CLI globalmente en tu sistema.
+
+Puedes verificar que Ionic CLI se instaló correctamente escribiendo ionic -v en tu terminal. Deberías ver la versión de Ionic CLI que acabas de instalar.
 
 ### Instalación
-
-Paso a paso cómo instalar las dependencias del proyecto:
 
 npm install
 
