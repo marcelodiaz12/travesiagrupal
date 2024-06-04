@@ -1,0 +1,62 @@
+[
+  {
+      "id": 1,
+      "nombre": "El Gourmet Vegano",
+      "precio": 3,
+      "valoracion": 5,
+      "vegano": 1,
+      "mascotas": 0,
+      "halal": 1,
+      "descripcion": "Un paraíso culinario para los amantes de la comida vegana.",
+      "ubicacion": 12,
+      "foto": "../../assets/rest1.jpg"
+  },
+  {
+      "id": 2,
+      "nombre": "La Cocina Tradicional",
+      "precio": 4,
+      "valoracion": 4,
+      "vegano": 0,
+      "mascotas": 1,
+      "halal": 0,
+      "descripcion": "Disfruta de los sabores auténticos de la cocina tradicional.",
+      "ubicacion": 8,
+      "foto": "../../assets/rest2.jpg"
+  },
+  {
+      "id": 3,
+      "nombre": "Sushi Express",
+      "precio": 2,
+      "valoracion": 5,
+      "vegano": 0,
+      "mascotas": 0,
+      "halal": 1,
+      "descripcion": "Deliciosos y frescos sushi preparados al momento.",
+      "ubicacion": 20,
+      "foto": "../../assets/rest3.jpg"
+  },
+  {
+      "id": 4,
+      "nombre": "Burger Haven",
+      "precio": 3,
+      "valoracion": 4,
+      "vegano": 0,
+      "mascotas": 1,
+      "halal": 0,
+      "descripcion": "El lugar perfecto para los amantes de las hamburguesas.",
+      "ubicacion": 5,
+      "foto": "../../assets/rest4.jpg"
+  },
+  {
+      "id": 5,
+      "nombre": "Mediterranean Delights",
+      "precio": 5,
+      "valoracion": 5,
+      "vegano": 1,
+      "mascotas": 0,
+      "halal": 1,
+      "descripcion": "Saborea los auténticos platos del Mediterráneo.",
+      "ubicacion": 18,
+      "foto": "../../assets/rest5.jpg"
+  }
+]

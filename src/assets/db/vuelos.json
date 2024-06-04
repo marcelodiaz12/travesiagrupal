@@ -1,0 +1,109 @@
+[
+  {
+      "id": 1,
+      "aerolinea": "Emirates",
+      "codigo_vuelo": "EK202",
+      "precio": 1,
+      "valoracion": 4,
+      "fecha": "01/06/2024",
+      "hora_despegue": "10:00",
+      "escalas": [
+          {
+              "aeropuerto_origen": "Dubai International Airport",
+              "aeropuerto_destino": "Heathrow Airport",
+              "hora_salida": "10:00",
+              "hora_llegada": "14:00",
+              "duracion": "6h",
+              "numero_vuelo": "EK202",
+              "clase": "Economy"
+          },
+          {
+              "aeropuerto_origen": "Heathrow Airport",
+              "aeropuerto_destino": "JFK Airport",
+              "hora_salida": "15:00",
+              "hora_llegada": "20:00",
+              "duracion": "8h",
+              "numero_vuelo": "EK202",
+              "clase": "Economy"
+          }
+      ]
+  },
+  {
+      "id": 2,
+      "aerolinea": "American Airlines",
+      "codigo_vuelo": "AA101",
+      "precio": 2,
+      "valoracion": 3,
+      "fecha": "02/06/2024",
+      "hora_despegue": "12:00",
+      "escalas": [
+          {
+              "aeropuerto_origen": "Los Angeles International Airport",
+              "aeropuerto_destino": "Dallas/Fort Worth International Airport",
+              "hora_salida": "12:00",
+              "hora_llegada": "14:00",
+              "duracion": "2h",
+              "numero_vuelo": "AA101",
+              "clase": "Economy"
+          },
+          {
+              "aeropuerto_origen": "Dallas/Fort Worth International Airport",
+              "aeropuerto_destino": "John F. Kennedy International Airport",
+              "hora_salida": "15:00",
+              "hora_llegada": "18:00",
+              "duracion": "3h",
+              "numero_vuelo": "AA101",
+              "clase": "Economy"
+          }
+      ]
+  },
+  {
+      "id": 3,
+      "aerolinea": "British Airways",
+      "codigo_vuelo": "BA305",
+      "precio": 3,
+      "valoracion": 2,
+      "fecha": "03/06/2024",
+      "hora_despegue": "09:00",
+      "escalas": [
+          {
+              "aeropuerto_origen": "Heathrow Airport",
+              "aeropuerto_destino": "Charles de Gaulle Airport",
+              "hora_salida": "09:00",
+              "hora_llegada": "12:00",
+              "duracion": "2h",
+              "numero_vuelo": "BA305",
+              "clase": "Economy"
+          }
+      ]
+  },
+  {
+      "id": 4,
+      "aerolinea": "Qatar Airways",
+      "codigo_vuelo": "QR701",
+      "precio": 4,
+      "valoracion": 1,
+      "fecha": "04/06/2024",
+      "hora_despegue": "14:00",
+      "escalas": [
+          {
+              "aeropuerto_origen": "Hamad International Airport",
+              "aeropuerto_destino": "Frankfurt Airport",
+              "hora_salida": "14:00",
+              "hora_llegada": "18:00",
+              "duracion": "6h",
+              "numero_vuelo": "QR701",
+              "clase": "Economy"
+          },
+          {
+              "aeropuerto_origen": "Frankfurt Airport",
+              "aeropuerto_destino": "JFK Airport",
+              "hora_salida": "19:00",
+              "hora_llegada": "22:00",
+              "duracion": "8h",
+              "numero_vuelo": "QR701",
+              "clase": "Economy"
+          }
+      ]
+  }
+]

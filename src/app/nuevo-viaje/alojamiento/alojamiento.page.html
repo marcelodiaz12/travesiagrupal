@@ -1,0 +1,81 @@
+<ion-header [translucent]="true"  >
+  <ion-toolbar  color="primary">
+    <ion-buttons slot="start">
+    <img src="../../assets/logotravel.png" />
+    <ion-button size="large" routerLink="/mensajes">
+      <ion-icon slot="icon-only" ios="mail" md="settings-sharp"></ion-icon>
+    </ion-button>
+    <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    
+  </ion-toolbar>
+</ion-header>
+
+    <ion-content [fullscreen]="true"> 
+
+      <div id="container">
+      
+        <section class="   "> 
+          <div class="flexhor sectionTitle  "> 
+            <div>
+               <h2>Elegir alojamientos</h2>
+            </div>
+            <div>
+              <ion-button size="large"  routerLink="../vuelo">
+                <ion-icon slot="icon-only" ios="arrow-back" md="settings-sharp"></ion-icon>
+              </ion-button>
+            </div>
+          </div>
+          <section class="">    
+            
+            
+            <ion-card *ngFor="let item of items">
+              <ion-card-header>
+                <ion-card-title>{{ item.nombre }}</ion-card-title>
+                <ion-card-subtitle>
+                  <ion-icon *ngFor="let star of utils.getStars(item.valoracion)" name="star"></ion-icon>
+                  <span *ngFor="let precio of utils.getStars(item.precio)">$</span>
+                </ion-card-subtitle>
+              </ion-card-header>
+            
+              <ion-card-content>   
+                <p>{{ item.descripcion }}</p> 
+                <ion-checkbox (ionChange)="onCheckboxChangeForAlojamiento(item.id, $event.detail.checked)"></ion-checkbox>
+              </ion-card-content>
+            </ion-card> 
+
+           
+          </section> 
+        </section> 
+      </div>
+    </ion-content>  
+    <ion-footer>
+      <ion-toolbar class="flexhor">
+        <span>
+          <ion-button  size="small"  routerLink="../amigos">
+            <ion-icon slot="icon-only"  ios="people"></ion-icon>           
+          </ion-button>
+          <ion-button  size="small" routerLink="../destino" >
+            <ion-icon slot="icon-only" ios="compass"></ion-icon>           
+          </ion-button>
+          <ion-button  size="small" routerLink="../vuelo">
+            <ion-icon slot="icon-only" ios="airplane"></ion-icon>           
+          </ion-button>
+          <ion-button  size="small" routerLink="../alojamiento">
+            <ion-icon slot="icon-only" ios="business"></ion-icon>
+           </ion-button>
+          <ion-button   size="small" routerLink="../restaurantes">
+            <ion-icon slot="icon-only" ios="restaurant"></ion-icon>           
+          </ion-button> 
+          <ion-button  size="small" routerLink="../actividades">
+            <ion-icon slot="icon-only" ios="balloon"></ion-icon>           
+          </ion-button> 
+        </span>
+        <span>
+          <ion-button size="small" color="secondary" routerLink="/nuevoviaje/restaurantes">
+            <ion-icon slot="end" name="arrow-forward"></ion-icon>
+            Siguiente
+          </ion-button>
+        </span>
+      </ion-toolbar>
+    </ion-footer>

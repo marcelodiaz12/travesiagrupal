@@ -1,0 +1,207 @@
+[{
+    "id": 1,
+    "nombre": "Asia",
+    "foto": "../../assets/asia.jpg",
+    "paises": [
+        {
+            "id": 11,
+            "nombre": "China"
+        },
+        {
+            "id": 12,
+            "nombre": "India"
+        },
+        {
+            "id": 13,
+            "nombre": "Japón"
+        },
+        {
+            "id": 14,
+            "nombre": "Corea del Sur"
+        },
+        {
+            "id": 15,
+            "nombre": "Indonesia"
+        },
+        {
+            "id": 16,
+            "nombre": "Tailandia"
+        },
+        {
+            "id": 17,
+            "nombre": "Vietnam"
+        },
+        {
+            "id": 18,
+            "nombre": "Malasia"
+        },
+        {
+            "id": 19,
+            "nombre": "Filipinas"
+        },
+        {
+            "id": 20,
+            "nombre": "Singapur"
+        }
+    ]
+}
+,
+  {
+    "id": 2,
+    "nombre": "Europa",
+    "foto": "../../assets/europa.jpg",
+    "paises": [
+        {
+            "id": 21,
+            "nombre": "Alemania"
+        },
+        {
+            "id": 22,
+            "nombre": "Francia"
+        },
+        {
+            "id": 23,
+            "nombre": "Italia"
+        },
+        {
+            "id": 24,
+            "nombre": "España"
+        },
+        {
+            "id": 25,
+            "nombre": "Portugal"
+        },
+        {
+            "id": 26,
+            "nombre": "Reino Unido"
+        },
+        {
+            "id": 27,
+            "nombre": "Suiza"
+        },
+        {
+            "id": 28,
+            "nombre": "Suecia"
+        },
+        {
+            "id": 29,
+            "nombre": "Noruega"
+        },
+        {
+            "id": 30,
+            "nombre": "Dinamarca"
+        }
+    ]
+}
+,
+  {
+      "id": 3,
+      "nombre": "Africa",
+      "foto": "../../assets/africa.jpg",
+      "paises": [
+          {
+              "id": 31,
+              "nombre": "Nigeria"
+          },
+          {
+              "id": 32,
+              "nombre": "South Africa"
+          },
+          {
+              "id": 33,
+              "nombre": "Kenya"
+          }
+      ]
+  },
+  {
+      "id": 4,
+      "nombre": "North America",
+      "foto": "../../assets/norteamerica.jpg",
+      "paises": [
+          {
+              "id": 41,
+              "nombre": "United States"
+          },
+          {
+              "id": 42,
+              "nombre": "Canada"
+          },
+          {
+              "id": 43,
+              "nombre": "Mexico"
+          }
+      ]
+  },{
+    "id": 5,
+    "nombre": "América del Sur",
+    "foto": "../../assets/suramerica.jpg",
+    "paises": [
+        {
+            "id": 51,
+            "nombre": "Brasil"
+        },
+        {
+            "id": 52,
+            "nombre": "Argentina"
+        },
+        {
+            "id": 53,
+            "nombre": "Chile"
+        },
+        {
+            "id": 54,
+            "nombre": "Perú"
+        },
+        {
+            "id": 55,
+            "nombre": "Colombia"
+        },
+        {
+            "id": 56,
+            "nombre": "Venezuela"
+        },
+        {
+            "id": 57,
+            "nombre": "Ecuador"
+        },
+        {
+            "id": 58,
+            "nombre": "Bolivia"
+        },
+        {
+            "id": 59,
+            "nombre": "Paraguay"
+        },
+        {
+            "id": 60,
+            "nombre": "Uruguay"
+        }
+    ]
+}
+,
+  {
+      "id": 6,
+      "nombre": "Oceania",
+      "foto": "../../assets/oceania.jpg",
+      "paises": [
+          {
+              "id": 61,
+              "nombre": "Australia"
+          },
+          {
+              "id": 62,
+              "nombre": "New Zealand"
+          },
+          {
+              "id": 63,
+              "nombre": "Fiji"
+          }
+      ]
+  },
+  {
+      "id": 7,
+      "nombre": "Antarctica",
+      "foto": "../../assets/antartica.jpg",
+      "paises": []
+  }
+]

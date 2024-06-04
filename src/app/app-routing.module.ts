@@ -4,41 +4,13 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'folder/Inbox',
+    redirectTo: 'folder',
     pathMatch: 'full'
   },
   {
-    path: 'folder/:id',
+    path: 'folder',
     loadChildren: () => import('./folder/folder.module').then( m => m.FolderPageModule)
-  },
-  {
-    path: 'seleccionardestino',
-    loadChildren: () => import('./seleccionardestino/seleccionardestino.module').then( m => m.SeleccionardestinoPageModule)
-  },
-  {
-    path: 'planearviaje',
-    loadChildren: () => import('./planearviaje/planearviaje.module').then( m => m.PlanearviajePageModule)
-  },
-  {
-    path: 'verificardisponibilidad',
-    loadChildren: () => import('./verificardisponibilidad/verificardisponibilidad.module').then( m => m.VerificardisponibilidadPageModule)
-  },
-  {
-    path: 'buscarvuelos',
-    loadChildren: () => import('./buscarvuelos/buscarvuelos.module').then( m => m.BuscarvuelosPageModule)
-  },
-  {
-    path: 'buscaralojamiento',
-    loadChildren: () => import('./buscaralojamiento/buscaralojamiento.module').then( m => m.BuscaralojamientoPageModule)
-  },
-  {
-    path: 'buscaractividades',
-    loadChildren: () => import('./buscaractividades/buscaractividades.module').then( m => m.BuscaractividadesPageModule)
-  },
-  {
-    path: 'totalviaje',
-    loadChildren: () => import('./totalviaje/totalviaje.module').then( m => m.TotalviajePageModule)
-  },
+  }, 
   {
     path: 'mensajes',
     loadChildren: () => import('./mensajes/mensajes.module').then( m => m.MensajesPageModule)
@@ -46,31 +18,7 @@ const routes: Routes = [
   {
     path: 'conversacion',
     loadChildren: () => import('./conversacion/conversacion.module').then( m => m.ConversacionPageModule)
-  },
-  {
-    path: 'resumenamigos',
-    loadChildren: () => import('./resumenamigos/resumenamigos.module').then( m => m.ResumenamigosPageModule)
-  },
-  {
-    path: 'resumenactividades',
-    loadChildren: () => import('./resumenactividades/resumenactividades.module').then( m => m.ResumenactividadesPageModule)
-  },
-  {
-    path: 'resumenalojamiento',
-    loadChildren: () => import('./resumenalojamiento/resumenalojamiento.module').then( m => m.ResumenalojamientoPageModule)
-  },
-  {
-    path: 'resumenrestaurantes',
-    loadChildren: () => import('./resumenrestaurantes/resumenrestaurantes.module').then( m => m.ResumenrestaurantesPageModule)
-  },
-  {
-    path: 'resumentransporte',
-    loadChildren: () => import('./resumentransporte/resumentransporte.module').then( m => m.ResumentransportePageModule)
-  },
-  {
-    path: 'resumenvuelos',
-    loadChildren: () => import('./resumenvuelos/resumenvuelos.module').then( m => m.ResumenvuelosPageModule)
-  },
+  }, 
   {
     path: 'misviajes',
     loadChildren: () => import('./misviajes/misviajes.module').then( m => m.MisviajesPageModule)
@@ -115,6 +63,38 @@ const routes: Routes = [
     path: 'votacion',
     loadChildren: () => import('./votacion/votacion.module').then( m => m.VotacionPageModule)
   },
+  {
+    path: 'nuevoviaje',
+    loadChildren: () => import('./nuevo-viaje/nuevo-viaje.module').then( m => m.NuevoViajePageModule)
+  },
+  {
+    path: 'nuevoviaje/amigos',
+    loadChildren: () => import('./nuevo-viaje/amigos/amigos.module').then( m => m.AmigosPageModule)
+  } ,
+  {
+    path: 'nuevoviaje/destino',
+    loadChildren: () => import('./nuevo-viaje/destino/destino.module').then( m => m.DestinoPageModule)
+  } ,
+  {
+    path: 'nuevoviaje/vuelo',
+    loadChildren: () => import('./nuevo-viaje/vuelo/vuelo.module').then( m => m.VueloPageModule)
+  } ,
+  {
+    path: 'nuevoviaje/alojamiento',
+    loadChildren: () => import('./nuevo-viaje/alojamiento/alojamiento.module').then( m => m.AlojamientoPageModule)
+  } ,
+  {
+    path: 'nuevoviaje/restaurantes',
+    loadChildren: () => import('./nuevo-viaje/restaurantes/restaurantes.module').then( m => m.RestaurantesPageModule)
+  } ,
+  {
+    path: 'nuevoviaje/actividades',
+    loadChildren: () => import('./nuevo-viaje/actividades/actividades.module').then( m => m.ActividadesPageModule)
+  }  ,
+  {
+    path: 'nuevoviaje/resumen',
+    loadChildren: () => import('./nuevo-viaje/resumen/resumen.module').then( m => m.ResumenPageModule)
+  } 
 ];
 
 @NgModule({

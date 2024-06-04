@@ -118,7 +118,7 @@ ion-menu.ios ion-item ion-icon {
 /* Set variables for all modes */
 :root {
     /* Set the background of the entire app */
-    --ion-background-color:  transparent;
+    --ion-background-color:  #fff;
   
     /* Set the font family of the entire app */
     --ion-font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Roboto', sans-serif;
@@ -159,17 +159,41 @@ ion-button {
 .flexhor {
     display: flex;    
     justify-content: space-between;
+    &.left{
+        justify-content: flex-start; 
+        p {
+            margin:10px 10px 0 0;
+        }
+        img {
+            margin-right: 10px;
+        }
+        h6{
+            font-size: 1.5rem;
+        }
+    }
+    > span {       
+        width: max-content;
+    }
 }
-h1,h2,h3,h4,h5,h6 {
+h1,h2,h3,h4,h5,h6, p {
     margin: 0;
+}
+.subtitle {
+    padding: 20px;
+    background: #8aafcd;
+    color: #032139;
 }
 section.profile.flexhor {
     align-items: center;
     text-align: left;
+    padding-top:20px;
     color: #ABDBE9;
     p {
         color:#ABDBE9 !important;
     }
+}
+.paddAll {
+    padding: 20px;
 }
 .paddinghor {
     padding:0 20px;
@@ -180,7 +204,8 @@ h2 {
 }
 .sectionTitle {
     align-items: center;
-    padding-bottom: 20px;
+    background: #032139;
+    padding: 20px ;
 }
 .topborder {
     border-top:2px groove #032139;
@@ -195,10 +220,12 @@ table {
         th {
             background-color: #032139;
             color: #ABDBE9;
-            padding:10px;
+            padding:5px;
+            text-align: left;
         }
         td { 
             background-color: #A5D8EA;
+            padding: 5px;
             color:#032139;
             ion-button {
                 --color:#032139;
@@ -216,15 +243,21 @@ table {
     h1 {
         color:#ABDBE9;
     }
+    img {
+        width: 50px;
+        height: 50px;
+    }
 }
 .conversacion {
+    overflow: hidden;
+    padding-top: 90px;
     div {
         display: flex;
         width: 100%;
         justify-content: space-between;
         margin-bottom: 20px;
         img {                    
-            height: 60px;
+            height: 50px;
         }
         p {
             margin:0;
@@ -329,15 +362,16 @@ ion-item.bgwhite {
 
 .login {
     display: flex;
-    flex-direction: column;
-    width: 80%;
-    margin: 0 auto;
-    padding: 20px 0 0 0;
+    flex-direction: column; 
     align-items: center;
     justify-content: center;
+    
+    height: 100vh;
+    width: 100vw; 
+    background: #354d61;
     ion-item {
         background-color: #fff;
-        width: 100%;
+        width: 70%;
         margin: 20px;
         border-radius: 10px;
     }
@@ -408,4 +442,25 @@ ion-radio::part(container) {
     padding: 10px;
     box-shadow: 0 0 10px;
     position: relative;
+}
+.threecols{ 
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    ion-card {
+        width: 40%;
+        ion-card-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            img {
+                width: 100px;
+                height: auto;
+            }
+        }
+    }
+}
+
+hr {    
+    background: #000;
 }

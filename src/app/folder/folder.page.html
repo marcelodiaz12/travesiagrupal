@@ -14,105 +14,37 @@
 <ion-content [fullscreen]="true"> 
 
   <div id="container">
-    <section class="profile flexhor paddinghor">
-      <div>
-        <img src="../../assets/user.png"/>
-      </div>
-      <div>
-        <h2>Camila Ramirez</h2>
-        <p>cami&#64;gmail.com</p>
-        <p>9 123 456 678</p>
-      </div>
-      <div>
-        <ion-button size="large">
-          <ion-icon slot="icon-only" ios="pencil" md="settings-sharp"></ion-icon>
-        </ion-button>
-      </div>
-    </section>
-    <section class="paddinghor topborder"> 
-      <div class="flexhor sectionTitle">
+   
+    <section class="   "> 
+      
+      <div class="flexhor sectionTitle  "> 
         <div>
-          <h2>Mis Viajes</h2> 
+           <h2>Mi perfil</h2>
         </div>
         <div>
-          <ion-button color="secondary" routerLink="/seleccionardestino" style="width:100%;text-align:center;" >Crear viaje</ion-button>
+          <ion-button size="large"  routerLink="/">
+            <ion-icon slot="icon-only" ios="settings" md="settings-sharp"></ion-icon>
+          </ion-button>
         </div>
       </div>
-      <div>
-        <table>
-          <thead>
-            <tr>
-              <th>Viaje</th>
-              <th>Fecha</th>
-              <th colspan="3"> </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Cancun 1</td>
-              <td>12/03/2023</td>
-              <td>                              
-                <ion-button size="large" color="default" routerLink="/detalle" >
-                  <ion-icon slot="icon-only" ios="eye" md="settings-sharp"></ion-icon>
-                </ion-button>
-              </td> 
-              <td>                              
-                <ion-button size="large" color="default">
-                  <ion-icon slot="icon-only" ios="trash" md="settings-sharp"></ion-icon>
-                </ion-button>
-              </td>
-            </tr> 
-          </tbody>
-        </table> 
-      </div>
     </section>
-    <section class="paddinghor topborder"> 
-      <div class="flexhor sectionTitle">
-        <div>
-          <h2>Mis amigos</h2> 
-        </div> 
-      </div>
-      <div>
-        <table>
-          <thead>
-            <tr>
-              <th>Nombre</th>
-              <th>Apellido</th>
-              <th colspan="2"> </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Pedro</td>
-              <td>Pascal</td> 
-              <td>                              
-                <ion-button size="large" color="default">
-                  <ion-icon slot="icon-only" ios="eye" md="settings-sharp"></ion-icon>
-                </ion-button>
-              </td>
-              <td>                              
-                <ion-button size="large" color="default">
-                  <ion-icon slot="icon-only" ios="trash" md="settings-sharp"></ion-icon>
-                </ion-button>
-              </td>
-            </tr>  
-            <tr>
-              <td>Pedro</td>
-              <td>Pascal</td> 
-              <td>                              
-                <ion-button size="large" color="default">
-                  <ion-icon slot="icon-only" ios="eye" md="settings-sharp"></ion-icon>
-                </ion-button>
-              </td>
-              <td>                              
-                <ion-button size="large" color="default">
-                  <ion-icon slot="icon-only" ios="trash" md="settings-sharp"></ion-icon>
-                </ion-button>
-              </td>
-            </tr>           
-          </tbody>
-        </table> 
-      </div>
+    <section>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>{{ currentUser?.name }} {{ currentUser?.apellido }}</ion-card-title>
+          <ion-card-subtitle>{{ currentUser?.email }}</ion-card-subtitle>
+        </ion-card-header>
+      
+        <ion-card-content>
+          <img [src]="currentUser?.foto" alt="Profile Picture"/> 
+          <p>Telefono: {{ currentUser?.telefono }}</p>
+          <p>Desponible desde: {{ currentUser?.libre_desde }}</p>
+          <p>Disponible hasta: {{ currentUser?.libre_hasta }}</p>
+          <p>Vegano: {{ currentUser?.vegano ? 'Si' : 'No' }}</p>
+          <p>Mascotas: {{ currentUser?.mascotas ? 'Si' : 'No' }}</p>
+          <p>Halal: {{ currentUser?.halal ? 'Si' : 'No' }}</p>
+        </ion-card-content>
+      </ion-card> 
     </section>
   </div>
 </ion-content>

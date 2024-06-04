@@ -3,15 +3,15 @@
 <ion-content [fullscreen]="true" > 
   <div class="login">
 
-    <img src="../../assets/logo2.png"/>
+    <img src="../../assets/logo2.png"/> 
     <ion-item>
-      <ion-input label="Usuario" labelPlacement="stacked" placeholder="Usuario"></ion-input>
+      <ion-input [(ngModel)]="email" label="Usuario" labelPlacement="stacked" placeholder="Correo electronico" value="john@example.com"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-input type="password" label="Password" value="NeverGonnaGiveYouUp">
+      <ion-input [(ngModel)]="password"  labelPlacement="stacked" type="password" label="Contraseña" value="1234" >
         <ion-input-password-toggle slot="end"></ion-input-password-toggle>
       </ion-input>
-    </ion-item>
-    <ion-button expand="block" routerLink="" >Ingresar</ion-button>
+    </ion-item> 
+    <ion-button expand="block" (click)="login()">Ingresar</ion-button>
   </div>
 </ion-content>

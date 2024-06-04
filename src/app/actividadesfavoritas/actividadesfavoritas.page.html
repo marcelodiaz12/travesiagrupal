@@ -15,63 +15,88 @@
 
   <div id="container">
    
-    <section class="paddinghor  "> 
+    <section class="   "> 
       <div class="flexhor sectionTitle">
         <div>
-          <h2>Actividades favoritas</h2> 
+          <h2>
+          <ion-icon name="balloon"></ion-icon>
+          Actividades favoritas</h2> 
         </div> 
       </div>
       <div>
-        <section class="paddinghor  ">   
-          <div class="results"> 
-            <table>
-              <thead>
-                <tr>
-                  <th>Ciudad</th>
-                  <th>Costo</th>
-                  <th>Valoracion</th>
-                  <th> </th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Cancun 1</td>
-                  <td>$$$$$</td>
-                  <td>    
-                    ★★★☆☆         
-                  </td>
-                  <td>                              
-                    <ion-button size="large" color="default">
-                      <ion-icon slot="icon-only" ios="eye" md="settings-sharp"></ion-icon>
+        <section class="">  
+          <ion-accordion-group>
+            <ion-accordion value="first">
+              <ion-item slot="header" color="light">
+                <ion-label>Filters</ion-label>
+              </ion-item>
+              <div class="ion-padding" slot="content">                    
+                <ion-list>
+                  <ion-item class="bgwhite"> 
+                    <ion-select label="Continente" label-placement="Floating" placeholder="Continente" id="continente">
+                    </ion-select>                
+                  </ion-item>
+                
+                  <ion-item class="bgwhite"> 
+                    
+                    <ion-select label="País" label-placement="Floating" placeholder="País" id="pais">
+                    </ion-select>
+
+                  </ion-item>
+                
+                  <ion-item class="bgwhite"> 
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                  </ion-item>
+                  <ion-item class="bgwhite"> 
+                    <ion-button size="small">$</ion-button>
+                    <ion-button size="small">$</ion-button>
+                    <ion-button size="small">$</ion-button>
+                    <ion-button size="small">$</ion-button>
+                    <ion-button size="small">$</ion-button>
+                  </ion-item>
+                  
+                  <ion-item class="bgwhite"> 
+                    <ion-datetime-button datetime="datetime"></ion-datetime-button>
+
+                    <ion-modal [keepContentsMounted]="true">
+                      <ng-template>
+                        <ion-datetime id="datetime"></ion-datetime>
+                      </ng-template>
+                    </ion-modal>
+                  </ion-item>
+                  <ion-item class="bgwhite"> 
+                  
+                    <ion-button>
+                      <ion-icon slot="start" name="filter"></ion-icon>
+                      Filter
                     </ion-button>
-                  </td>   
-                </tr> 
-                <tr>
-                  <td>Cancun 1</td>
-                  <td>$$$</td>
-                  <td>    
-                    ★☆☆☆☆         
-                  </td>
-                  <td>                              
-                    <ion-button size="large" color="default">
-                      <ion-icon slot="icon-only" ios="eye" md="settings-sharp"></ion-icon>
-                    </ion-button>
-                  </td>   
-                </tr> 
-                <tr>
-                  <td>Cancun 1</td>
-                  <td>$</td>
-                  <td>    
-                    ★★☆☆☆         
-                  </td>
-                  <td>                              
-                    <ion-button size="large" color="default">
-                      <ion-icon slot="icon-only" ios="eye" md="settings-sharp"></ion-icon>
-                    </ion-button>
-                  </td>   
-                </tr> 
-              </tbody>
-            </table>   
+                  </ion-item>
+                </ion-list>
+              </div>
+            </ion-accordion> 
+          </ion-accordion-group> 
+          <div class="results">  
+            <ion-card  *ngFor="let item of items">
+              <img alt="{{ item.nombre }}" src="{{ item.foto }}" />
+              <ion-card-header>
+                <ion-card-title>{{ item.nombre }}</ion-card-title> 
+                <ion-card-subtitle>
+                  <ion-icon *ngFor="let star of utils.getStars(item.valoracion)" name="star"></ion-icon>
+                </ion-card-subtitle>
+              </ion-card-header>
+            
+              <ion-card-content>  
+                <p><span *ngFor="let precio of utils.getStars(item.precio)">$</span> </p>
+                <p>{{ item.descripcion }}</p>
+                <p>{{ item.fecha_inicio }} - {{ item.fecha_final }}</p>
+                <p>{{ item.hora_inicio }} - {{ item.hora_termino }}</p> 
+              </ion-card-content>
+            </ion-card> 
+              
           </div>
         </section> 
       </div>

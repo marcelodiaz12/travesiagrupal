@@ -1,0 +1,112 @@
+[
+  {
+      "id_viaje": 1,
+      "id_ubicacion": 12,
+      "id_vuelo_ida": 1,
+      "id_vuelo_vuelta": 2,
+      "id_usuarios": [1, 2, 3, 4, 5],
+      "id_organizador": 1,
+      "id_alojamiento": 1,
+      "id_restaurantes": [1, 3, 5],
+      "id_actividades": [1, 3, 5]
+  },
+  {
+      "id_viaje": 2,
+      "id_ubicacion": 21,
+      "id_vuelo_ida": 2,
+      "id_vuelo_vuelta": 3,
+      "id_usuarios": [6, 7, 8],
+      "id_organizador": 6,
+      "id_alojamiento": 2,
+      "id_restaurantes": [2, 4],
+      "id_actividades": [2, 4]
+  },
+  {
+      "id_viaje": 3,
+      "id_ubicacion": 20,
+      "id_vuelo_ida": 3,
+      "id_vuelo_vuelta": 4,
+      "id_usuarios": [9, 10],
+      "id_organizador": 9,
+      "id_alojamiento": 3,
+      "id_restaurantes": [3, 5],
+      "id_actividades": [1, 3]
+  },
+  {
+      "id_viaje": 4,
+      "id_ubicacion": 18,
+      "id_vuelo_ida": 4,
+      "id_vuelo_vuelta": 5,
+      "id_usuarios": [11, 12],
+      "id_organizador": 6,
+      "id_alojamiento": 4,
+      "id_restaurantes": [1, 2],
+      "id_actividades": [2, 4]
+  },
+  {
+      "id_viaje": 5,
+      "id_ubicacion": 22,
+      "id_vuelo_ida": 5,
+      "id_vuelo_vuelta": 1,
+      "id_usuarios": [13, 14, 15],
+      "id_organizador": 5,
+      "id_alojamiento": 5,
+      "id_restaurantes": [3, 4, 5],
+      "id_actividades": [1, 3, 5]
+  },
+  {
+      "id_viaje": 6,
+      "id_ubicacion": 16,
+      "id_vuelo_ida": 1,
+      "id_vuelo_vuelta": 3,
+      "id_usuarios": [16, 17],
+      "id_organizador": 4,
+      "id_alojamiento": 2,
+      "id_restaurantes": [2, 3, 4],
+      "id_actividades": [1, 2, 4]
+  },
+  {
+      "id_viaje": 7,
+      "id_ubicacion": 14,
+      "id_vuelo_ida": 3,
+      "id_vuelo_vuelta": 5,
+      "id_usuarios": [18, 19],
+      "id_organizador": 3,
+      "id_alojamiento": 3,
+      "id_restaurantes": [1, 4, 5],
+      "id_actividades": [2, 3, 5]
+  },
+  {
+      "id_viaje": 8,
+      "id_ubicacion": 32,
+      "id_vuelo_ida": 2,
+      "id_vuelo_vuelta": 4,
+      "id_usuarios": [20, 1, 2],
+      "id_organizador": 1,
+      "id_alojamiento": 4,
+      "id_restaurantes": [2, 3],
+      "id_actividades": [1, 4]
+  },
+  {
+      "id_viaje": 9,
+      "id_ubicacion": 42,
+      "id_vuelo_ida": 4,
+      "id_vuelo_vuelta": 1,
+      "id_usuarios": [3, 5, 7],
+      "id_organizador": 3,
+      "id_alojamiento": 5,
+      "id_restaurantes": [1, 4],
+      "id_actividades": [3, 5]
+  },
+  {
+      "id_viaje": 10,
+      "id_ubicacion": 52,
+      "id_vuelo_ida": 5,
+      "id_vuelo_vuelta": 3,
+      "id_usuarios": [8, 10, 12],
+      "id_organizador": 8,
+      "id_alojamiento": 1,
+      "id_restaurantes": [2, 3, 5],
+      "id_actividades": [1, 2, 4]
+  }
+]

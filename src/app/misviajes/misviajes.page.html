@@ -15,58 +15,92 @@
 
   <div id="container">
    
-    <section class="paddinghor  "> 
-      <div class="flexhor sectionTitle">
+    <section class="  "> 
+      <div class="flexhor sectionTitle  "> 
         <div>
           <h2>Mis Viajes</h2> 
         </div>
         <div>
-          <ion-button color="secondary" routerLink="/seleccionardestino" style="width:100%;text-align:center;" >Crear viaje</ion-button>
+          <ion-button color="secondary" routerLink="/nuevoviaje/amigos" style="width:100%;text-align:center;" >Crear viaje</ion-button>
         </div>
       </div>
-      <div>
-        <table>
-          <thead>
-            <tr>
-              <th>Viaje</th>
-              <th>Fecha</th>
-              <th colspan="3"> </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Cancun 1</td>
-              <td>12/03/2023</td>
-              <td>                              
-                <ion-button size="large" color="default" routerLink="/detalle" >
-                  <ion-icon slot="icon-only" ios="eye" md="settings-sharp"></ion-icon>
-                </ion-button>
-              </td> 
-              <td>                              
-                <ion-button size="large" color="default">
-                  <ion-icon slot="icon-only" ios="trash" md="settings-sharp"></ion-icon>
-                </ion-button>
-              </td>
-            </tr>
-        
-            <tr>
-              <td>Cancun 1</td>
-              <td>12/03/2023</td>
-              <td>                              
-                <ion-button size="large" color="default" routerLink="/detalle" >
-                  <ion-icon slot="icon-only" ios="eye" md="settings-sharp"></ion-icon>
-                </ion-button>
-              </td> 
-              <td>                              
-                <ion-button size="large" color="default">
-                  <ion-icon slot="icon-only" ios="trash" md="settings-sharp"></ion-icon>
-                </ion-button>
-              </td>
-            </tr>
-        
-          </tbody>
-        </table> 
-      </div>
+      <section class="paddinghor">   
+        <ion-accordion-group>
+          <ion-accordion value="first">
+            <ion-item slot="header" color="light">
+              <ion-label>Filters</ion-label>
+            </ion-item>
+            <div class=" " slot="content">                    
+              <ion-list>
+                <ion-item class="bgwhite"> 
+                  <ion-select label="Continente" label-placement="Floating" placeholder="Continente" id="continente">
+                  </ion-select>                
+                </ion-item>
+              
+                <ion-item class="bgwhite"> 
+                  
+                  <ion-select label="País" label-placement="Floating" placeholder="País" id="pais">
+                  </ion-select>
+
+                </ion-item>
+              
+                <ion-item class="bgwhite"> 
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                </ion-item> 
+                 
+                <ion-item class="bgwhite"> 
+                  <ion-checkbox>Vegano</ion-checkbox>
+                  <ion-checkbox>Halal</ion-checkbox>
+                  <ion-checkbox>Mascotas</ion-checkbox>
+                </ion-item>
+                 
+                <ion-item class="bgwhite"> 
+                  <ion-datetime-button datetime="datetime"></ion-datetime-button>
+
+                  <ion-modal [keepContentsMounted]="true">
+                    <ng-template>
+                      <ion-datetime id="datetime"></ion-datetime>
+                    </ng-template>
+                  </ion-modal>
+                </ion-item>
+                <ion-item class="bgwhite"> 
+                
+                  <ion-button>
+                    <ion-icon slot="start" name="filter"></ion-icon>
+                    Filter
+                  </ion-button>
+                </ion-item>
+              </ion-list>
+            </div>
+          </ion-accordion> 
+        </ion-accordion-group> 
+        <div class="results">  
+          <ion-card  *ngFor="let viaje of viajes"> 
+            <ion-card-header>
+              <ion-card-title>{{ getDestinoNombre(viaje.id_ubicacion) }}</ion-card-title> 
+              <ion-card-subtitle> 
+                <p>{{ getVueloNombre(viaje.id_vuelo_ida) }} - {{ getVueloNombre(viaje.id_vuelo_vuelta) }}</p>  
+              </ion-card-subtitle>
+            </ion-card-header>
+          
+            <ion-card-content>                
+              <p>Organizado por: {{ getUsuarioNombre(viaje.id_organizador) }}</p> 
+              <p>Participantes: {{ getAmigosNombre(viaje.id_usuarios) }}</p>   
+              <hr>
+              <p>    <ion-icon aria-hidden="true" slot="start" ios="business" md="business-sharp"></ion-icon> {{ getAlojamientoNombre(viaje.id_alojamiento) }}</p>  
+              <hr>
+              <p><ion-icon aria-hidden="true" slot="start" ios="restaurant" md="restaurant-sharp"></ion-icon> {{ getRestaurantNombre(viaje.id_restaurantes) }}</p>  
+              <hr> 
+              <p><ion-icon aria-hidden="true" slot="start" ios="balloon" md="balloon-sharp"></ion-icon> {{ getActividadNombre(viaje.id_actividades) }}</p> 
+            </ion-card-content>
+          </ion-card> 
+              
+        </div>
+      </section> 
     </section> 
   </div>
 </ion-content>

@@ -15,97 +15,44 @@
 
   <div id="container">
    
-    <section class="paddinghor  "> 
+    <section class="   "> 
       <div class="flexhor sectionTitle">
         <div>
-          <h2>Destinos populares</h2> 
+          <h2>
+            <ion-icon name="compass"></ion-icon>Destinos populares</h2> 
         </div> 
       </div>
       <div>
-        <section class="paddinghor  ">  
+        <section class="   ">  
           <div   >
             <ion-list>
-              <ion-item class="bgwhite">
-                <ion-select label="Continente" label-placement="Floating " placeholder="Continente">
-                  <ion-select-option value="conti1">Asia</ion-select-option>
-                  <ion-select-option value="conti3">America</ion-select-option>
-                  <ion-select-option value="conti3">Europa</ion-select-option>
-                  <ion-select-option value="conti3">Africa</ion-select-option>
-                  <ion-select-option value="conti3">Oceania</ion-select-option>
-                </ion-select>
+              <ion-item class="bgwhite"> 
+                <ion-select label="Continente" label-placement="Floating" placeholder="Continente" id="continente">
+                </ion-select>                
               </ion-item>
             
-              <ion-item class="bgwhite">
-                <ion-select label="Pais" label-placement="Floating " placeholder="Pais">
-                  <ion-select-option value="pais1">Albania Indonesia
-                    Alemania Irak
-                  </ion-select-option> 
-                  <ion-select-option value="pais1">Angola Irlanda (Eire)
-                  </ion-select-option> 
-                  <ion-select-option value="pais1">Antigua y Barbuda Islas Feroe
-                  </ion-select-option> 
-                  <ion-select-option value="pais1">Argentina Islas Vírgenes (Norteamericanas)
-                  </ion-select-option> 
-                  <ion-select-option value="pais1">Aruba Israel
-                  </ion-select-option> 
-                  <ion-select-option value="pais1">Australia Italia
-                  </ion-select-option> 
-                  <ion-select-option value="pais1">Bahamas Jamaica
-                  </ion-select-option> 
+              <ion-item class="bgwhite"> 
+                
+                <ion-select label="País" label-placement="Floating" placeholder="País" id="pais">
                 </ion-select>
+
               </ion-item>
              
             </ion-list>
           </div> 
           <div class="results"> 
-            <table>
-              <thead>
-                <tr>
-                  <th>Ciudad</th>
-                  <th>Costo</th>
-                  <th>Valoracion</th>
-                  <th> </th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Cancun 1</td>
-                  <td>$$$$$</td>
-                  <td>    
-                    ★★★☆☆         
-                  </td>
-                  <td>                              
-                    <ion-button size="large" color="default">
-                      <ion-icon slot="icon-only" ios="eye" md="settings-sharp"></ion-icon>
-                    </ion-button>
-                  </td>   
-                </tr> 
-                <tr>
-                  <td>Cancun 1</td>
-                  <td>$$$</td>
-                  <td>    
-                    ★☆☆☆☆         
-                  </td>
-                  <td>                              
-                    <ion-button size="large" color="default">
-                      <ion-icon slot="icon-only" ios="eye" md="settings-sharp"></ion-icon>
-                    </ion-button>
-                  </td>   
-                </tr> 
-                <tr>
-                  <td>Cancun 1</td>
-                  <td>$</td>
-                  <td>    
-                    ★★☆☆☆         
-                  </td>
-                  <td>                              
-                    <ion-button size="large" color="default">
-                      <ion-icon slot="icon-only" ios="eye" md="settings-sharp"></ion-icon>
-                    </ion-button>
-                  </td>   
-                </tr> 
-              </tbody>
-            </table>   
+            <ion-card  *ngFor="let destino of destinos">
+              <img alt="{{ destino.nombre }}" src="{{ destino.foto }}" />
+              <ion-card-header>
+                <ion-card-title>{{ destino.nombre }}</ion-card-title> 
+              </ion-card-header>
+            
+              <ion-card-content>
+                <span *ngFor="let pais of destino.paises; let i = index">
+                  {{ pais.nombre }}<span *ngIf="i < destino.paises.length - 1">, </span>
+                </span>
+              </ion-card-content>
+            </ion-card> 
           </div>
         </section> 
       </div>
