@@ -48,7 +48,12 @@ Angular - Manejo de dependencias
 
 ### Autores
 
-Marcelo Diaz - Construcción de aplicación básica (parte B) - marcelodiaz12
+Marcelo Diaz - 
+
+U4: Trabajo de la unidad (parte A)
+Construir una aplicación móvil (parte A) 
+
+- marcelodiaz12
 
 ### Licencia
 Este proyecto no está licenciado bajo ni nunguna licencia
@@ -61,3 +66,19 @@ que aparecen al aprender un lenguaje de programacion nuevo
 El tema del routing para linkear una pagina con otra me costo un poco entenderlo
 pero finalmente siguiendo el tutorial de la pagina de ionic pude ralizarlo sin mayores problemas.
 
+### Actualizacion 04/06/2024
+
+En esta parte de la entrega debi trabajar con datos, dado el tamaño 
+pequeño de la aplicacion no utilize sqlite, sino una serie de archivos .json
+donde guardé la informacion y la accesé mediante servicios que generé
+para interactuar con los datos y mostrarlos por pantalla.
+
+Lo mas complejo de esta entrega fue la creacion de una variable de sesion
+para poder mostrar la informacion correcta en el perfil de usuario y los datos 
+del usuario logueado donde correspondia.
+
+### Para ingresar a la aplicacion
+usuario: john@example.com
+contrasena: 1234 
+
+o revisar le archivo assets/db/usuarios.json para testear la variable de sesion
