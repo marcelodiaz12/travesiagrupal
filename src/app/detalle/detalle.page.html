@@ -2,8 +2,8 @@
   <ion-toolbar  color="primary">
     <ion-buttons slot="start">
     <img src="../../assets/logotravel.png" />
-    <ion-button size="large" routerLink="/mensajes">
-      <ion-icon slot="icon-only" ios="mail" md="settings-sharp"></ion-icon>
+    <ion-button size="large" routerLink="/votacion">
+      <ion-icon slot="icon-only" ios="star-half" md="settings-sharp"></ion-icon>
     </ion-button>
     <ion-menu-button></ion-menu-button>
     </ion-buttons>
@@ -14,177 +14,76 @@
 <ion-content [fullscreen]="true"> 
 
   <div id="container">
-   
-    <section class="paddinghor  "> 
+    <section>
+      
       <div class="flexhor sectionTitle">
         <div>
-          <h2>Viaje a cancun</h2> 
-          <h3>Resultados</h3>
+          <h2 *ngIf="viaje">
+            <ion-icon name="compass"></ion-icon> {{ getDestinoNombre(viaje.id_ubicacion) }} </h2> 
         </div> 
-        <div>
-          <ion-button color="secondary" routerLink="/votacion" style="width:100%;text-align:center;" >Votar</ion-button>
-        </div>
-      </div>
-      <div> 
-        <table class="voting">
-          <tr>
-            <th>Vuelos</th>
-            <th><img src="../../assets/user.png" style="width: 20px;height: auto;"/></th>
-            <th><img src="../../assets/user2.png" style="width: 20px;height: auto;"/></th>
-            <th><img src="../../assets/user3.png" style="width: 20px;height: auto;"/></th>
-            <th><img src="../../assets/user4.png" style="width: 20px;height: auto;"/></th>
-          </tr>
-          <tr>
-            <td>Qantas</td>
-            <td>☆</td>
-            <td>☆</td>
-            <td>★</td>
-            <td>★</td>
-          </tr>
-          <tr>
-            <td>LAN</td>
-            <td>★</td>
-            <td>☆</td>
-            <td>★</td>
-            <td>★</td>
-          </tr>
-          <tr>
-            <td>JETSTAR</td>
-            <td>☆</td>
-            <td>★</td>
-            <td>☆</td>
-            <td>★</td>
-          </tr>
-        </table>
-      </div>
-      <div> 
-        <table class="voting">
-          <tr>
-            <th>Hoteles</th>
-            <th><img src="../../assets/user.png" style="width: 20px;height: auto;"/></th>
-            <th><img src="../../assets/user2.png" style="width: 20px;height: auto;"/></th>
-            <th><img src="../../assets/user3.png" style="width: 20px;height: auto;"/></th>
-            <th><img src="../../assets/user4.png" style="width: 20px;height: auto;"/></th>
-          </tr>
-          <tr>
-            <td>Sheraton</td>
-            <td>☆</td>
-            <td>☆</td>
-            <td>★</td>
-            <td>★</td>
-          </tr>
-          <tr>
-            <td>Ritz</td>
-            <td>★</td>
-            <td>☆</td>
-            <td>★</td>
-            <td>★</td>
-          </tr>
-          <tr>
-            <td>Holliday</td>
-            <td>☆</td>
-            <td>★</td>
-            <td>☆</td>
-            <td>★</td>
-          </tr>
-        </table>
-      </div>
-      <div> 
-        <table class="voting">
-          <tr>
-            <th>Actividades</th>
-            <th><img src="../../assets/user.png" style="width: 20px;height: auto;"/></th>
-            <th><img src="../../assets/user2.png" style="width: 20px;height: auto;"/></th>
-            <th><img src="../../assets/user3.png" style="width: 20px;height: auto;"/></th>
-            <th><img src="../../assets/user4.png" style="width: 20px;height: auto;"/></th>
-          </tr>
-          <tr>
-            <td>Paseo</td>
-            <td>☆</td>
-            <td>☆</td>
-            <td>★</td>
-            <td>★</td>
-          </tr>
-          <tr>
-            <td>Fiesta</td>
-            <td>★</td>
-            <td>☆</td>
-            <td>★</td>
-            <td>★</td>
-          </tr>
-          <tr>
-            <td>Tour</td>
-            <td>☆</td>
-            <td>★</td>
-            <td>☆</td>
-            <td>★</td>
-          </tr>
-        </table>
-      </div>
-      <div> 
-        <table class="voting">
-          <tr>
-            <th>Restaurantes</th>
-            <th><img src="../../assets/user.png" style="width: 20px;height: auto;"/></th>
-            <th><img src="../../assets/user2.png" style="width: 20px;height: auto;"/></th>
-            <th><img src="../../assets/user3.png" style="width: 20px;height: auto;"/></th>
-            <th><img src="../../assets/user4.png" style="width: 20px;height: auto;"/></th>
-          </tr>
-          <tr>
-            <td>Rest 1</td>
-            <td>☆</td>
-            <td>☆</td>
-            <td>★</td>
-            <td>★</td>
-          </tr>
-          <tr>
-            <td>Rest 2</td>
-            <td>★</td>
-            <td>☆</td>
-            <td>★</td>
-            <td>★</td>
-          </tr>
-          <tr>
-            <td>Rest 3</td>
-            <td>☆</td>
-            <td>★</td>
-            <td>☆</td>
-            <td>★</td>
-          </tr>
-        </table>
-      </div>
-      <div> 
-        <table class="voting">
-          <tr>
-            <th>Transporte</th>
-            <th><img src="../../assets/user.png" style="width: 20px;height: auto;"/></th>
-            <th><img src="../../assets/user2.png" style="width: 20px;height: auto;"/></th>
-            <th><img src="../../assets/user3.png" style="width: 20px;height: auto;"/></th>
-            <th><img src="../../assets/user4.png" style="width: 20px;height: auto;"/></th>
-          </tr>
-          <tr>
-            <td>BUS</td>
-            <td>☆</td>
-            <td>☆</td>
-            <td>★</td>
-            <td>★</td>
-          </tr>
-          <tr>
-            <td>BOTE</td>
-            <td>★</td>
-            <td>☆</td>
-            <td>★</td>
-            <td>★</td>
-          </tr>
-          <tr>
-            <td>CABALLO</td>
-            <td>☆</td>
-            <td>★</td>
-            <td>☆</td>
-            <td>★</td>
-          </tr>
-        </table>
       </div>
     </section> 
+    <section class="padAll">
+      <div *ngIf="viaje">   
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>{{ getDestinoNombre(viaje.id_ubicacion) }}</ion-card-title>
+            <ion-card-subtitle>{{ getVueloNombre(viaje.id_vuelo_ida) }} - {{ getVueloNombre(viaje.id_vuelo_vuelta) }}</ion-card-subtitle>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-list>
+              <ion-item>
+                <ion-thumbnail slot="start">
+                  <img alt="{{ getUsuarioNombre(viaje.id_organizador) }}" src="{{ getUsuarioFoto(viaje.id_organizador) }}" />
+                </ion-thumbnail>
+                <ion-label>Organizado por: {{ getUsuarioNombre(viaje.id_organizador) }}</ion-label>
+              </ion-item>
+         
+              <ion-item>
+                <ion-thumbnail slot="start">
+                  <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
+                </ion-thumbnail>
+                <ion-label>Participantes: {{ getAmigosNombre(viaje.id_usuarios) }}</ion-label>
+              </ion-item>
+         
+                  
+                <ion-item *ngFor="let restaurante of selectedRestaurantes; let i = index">
+                  <ion-thumbnail slot="start">
+                    <img alt=" {{ restaurante.nombre }} " src=" {{ restaurante.foto }} " />
+                  </ion-thumbnail>
+                  <ion-label> {{ restaurante.nombre }} </ion-label>
+                  <p>0 votos</p>
+                </ion-item>
+               
+              
+                <ion-item *ngFor="let actividad of selectedActividades; let i = index">
+                  <ion-thumbnail slot="start">
+                    <img alt=" {{ actividad.nombre }} " src="{{ actividad.foto }}" />
+                  </ion-thumbnail>
+                  <ion-label> {{ actividad.nombre }} </ion-label>
+                  <p>0 votos</p>
+                </ion-item>
+               
+              
+              
+              <ion-item lines="none">
+                <ion-thumbnail slot="start">
+                  <img alt="{{ getAlojamientoNombre(viaje.id_alojamiento) }}" src="{{ getAlojamientoFoto(viaje.id_alojamiento) }}" />
+                </ion-thumbnail>
+                <ion-label> {{ getAlojamientoNombre(viaje.id_alojamiento) }}</ion-label> 
+              </ion-item>
+
+ 
+            </ion-list>
+          </ion-card-content>
+        </ion-card>
+        
+      
+      </div>
+      <div *ngIf="!viaje">
+        <p>No se encontró el viaje.</p>
+      </div>
+      
+    </section>
   </div>
 </ion-content>

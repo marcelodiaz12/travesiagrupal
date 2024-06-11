@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core'; 
+import { Component, OnInit, AfterViewInit } from '@angular/core'; 
 import { HttpClient } from '@angular/common/http';
 import { UtilsService } from '../utils.service'; // Adjust the path as needed
 import { DataService } from '../services/data.service';
@@ -8,12 +8,12 @@ import { DataService } from '../services/data.service';
   templateUrl: './alojamientosconofertas.page.html',
   styleUrls: ['./alojamientosconofertas.page.scss'],
 })
-export class AlojamientosconofertasPage implements OnInit {
+export class AlojamientosconofertasPage implements OnInit, AfterViewInit {
 
-  public items: any[] = []; // Define la propiedad actividades
-  public destinos: any[] = []; // Define la propiedad destinos
   // Variables para almacenar los selectores
   continenteSelect!: HTMLIonSelectElement; 
+  public items: any[] = []; // Define la propiedad actividades
+  public destinos: any[] = []; // Define la propiedad destinos
   paisSelect!: HTMLIonSelectElement;
 
   constructor(
@@ -22,6 +22,20 @@ export class AlojamientosconofertasPage implements OnInit {
     private http: HttpClient
   ) {} 
   
+  ngAfterViewInit() {
+    this.initializeSelectors();
+  }
+  ngOnInit() {
+    
+    // Cargar los datos desde un archivo JSON o una API
+    this.dataService.getDestinos().subscribe(data => {
+      this.destinos = data; // Asigna los datos a la propiedad destinos 
+    });
+    // Cargar los datos desde un archivo JSON o una API
+    this.dataService.getAlojamientos().subscribe(data => {
+      this.items = data; // Asigna los datos a la propiedad items
+    }); 
+  }
   // Función para agregar opciones a un elemento select
   agregarOpciones(selectElement: HTMLIonSelectElement, options: any[]) {
     options.forEach(option => {
@@ -51,19 +65,8 @@ export class AlojamientosconofertasPage implements OnInit {
       this.agregarOpciones(this.paisSelect, continente.paises);
     }
   }
-  ngOnInit() {
-    
-    // Cargar los datos desde un archivo JSON o una API
-    this.dataService.getDestinos().subscribe(data => {
-      this.destinos = data; // Asigna los datos a la propiedad destinos
-    });
-    // Cargar los datos desde un archivo JSON o una API
-    this.dataService.getAlojamientos().subscribe(data => {
-      this.items = data; // Asigna los datos a la propiedad items
-    });
-  }
 
-  ionViewDidEnter() {
+  initializeSelectors() {
     // Obtener los selectores
     this.continenteSelect = document.getElementById('continente') as HTMLIonSelectElement;
     this.paisSelect = document.getElementById('pais') as HTMLIonSelectElement;

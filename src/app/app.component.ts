@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { AuthService } from './services/auth.service';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -10,7 +9,7 @@ import { Router } from '@angular/router';
 export class AppComponent {
   currentUser: any;
   public appPages = [
-    { title: 'Mi perfil', url: '', icon: 'person-circle' },
+    { title: 'Mi perfil', url: 'folder', icon: 'person-circle' },
     { title: 'Mis viajes', url: 'misviajes', icon: 'calendar' },
     { title: 'Mis amigos', url: 'misamigos', icon: 'people' },
     { title: 'Destinos populares', url: 'destinospopulares', icon: 'compass' },
@@ -22,20 +21,18 @@ export class AppComponent {
   ];
   public labels = [ /*'Family', 'Friends', 'Notes'*/ ];
   constructor(
-    private authService: AuthService, 
-    private router: Router) {}
+    private authService: AuthService) {}
   // Method to create an array with the length of valoracion
   getStars(valoracion: number): any[] {
     return new Array(valoracion);
   } 
-  ngOnInit() { 
-    
-    this.currentUser = this.authService.getCurrentUser();
-    if (!this.currentUser) {
-      // Redirect to login if no user is logged in
-      this.router.navigate(['/login']);
-    }
-     
-  
-  } 
+  ngOnInit() {
+    this.authService.currentUser.subscribe(user => {
+      this.currentUser = user;
+    });
+  }
+
+  logout() {
+    this.authService.logout();
+  }
 }

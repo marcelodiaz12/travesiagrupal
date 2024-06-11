@@ -61,6 +61,7 @@ export class RestauranteseconomicosPage implements OnInit {
     this.dataService.getRestaurantes().subscribe(data => {
       this.items = data; // Asigna los datos a la propiedad items
     });
+    this.ionViewDidEnter();
   }
  
   ionViewDidEnter() {

@@ -20,6 +20,14 @@ export class DestinospopularesPage implements OnInit {
     private http: HttpClient
   ) {}
 
+  ngOnInit() {  
+    // Cargar los datos desde un archivo JSON o una API
+    this.dataService.getDestinos().subscribe(data => {
+      this.destinos = data; // Asigna los datos a la propiedad destinos
+      this.initializeSelectors();
+    }); 
+  }
+
   // Función para agregar opciones a un elemento select
   agregarOpciones(selectElement: HTMLIonSelectElement, options: any[]) {
     options.forEach(option => {
@@ -50,15 +58,7 @@ export class DestinospopularesPage implements OnInit {
     }
   }
 
-  ngOnInit() {  
-
-    // Cargar los datos desde un archivo JSON o una API
-    this.dataService.getDestinos().subscribe(data => {
-      this.destinos = data; // Asigna los datos a la propiedad destinos
-    }); 
-  }
-
-  ionViewDidEnter() {
+  initializeSelectors() {
     // Obtener los selectores
     this.continenteSelect = document.getElementById('continente') as HTMLIonSelectElement;
     this.paisSelect = document.getElementById('pais') as HTMLIonSelectElement;

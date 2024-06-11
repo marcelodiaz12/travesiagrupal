@@ -81,4 +81,9 @@ del usuario logueado donde correspondia.
 usuario: john@example.com
 contrasena: 1234 
 
+### para instalar la apk
+buscar el archivo APK en android/app/build/outputs/debug
+el archivo se llama
+app-debug.apk
+
 o revisar le archivo assets/db/usuarios.json para testear la variable de sesion

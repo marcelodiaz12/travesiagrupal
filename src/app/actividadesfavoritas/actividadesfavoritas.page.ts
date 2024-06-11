@@ -10,10 +10,10 @@ import { DataService } from '../services/data.service';
 })
 export class ActividadesfavoritasPage implements OnInit {
 
-public items: any[] = []; // Define la propiedad actividades
-public destinos: any[] = []; // Define la propiedad destinos
 // Variables para almacenar los selectores
-continenteSelect!: HTMLIonSelectElement; 
+continenteSelect!: HTMLIonSelectElement;
+public items: any[] = []; // Define la propiedad actividades
+public destinos: any[] = []; // Define la propiedad destinos 
 paisSelect!: HTMLIonSelectElement;
 
 constructor(
@@ -22,6 +22,19 @@ constructor(
   private http: HttpClient
 ) {}
 
+  ngOnInit() {
+    
+    // Cargar los datos desde un archivo JSON o una API
+    this.dataService.getDestinos().subscribe(data => {
+      this.destinos = data; // Asigna los datos a la propiedad destinos
+      this.initializeSelectors();
+    });
+    // Cargar los datos desde un archivo JSON o una API
+    this.dataService.getActividades().subscribe(data => {
+      this.items = data; // Asigna los datos a la propiedad items
+    });  
+  }
+ 
   // Función para agregar opciones a un elemento select
   agregarOpciones(selectElement: HTMLIonSelectElement, options: any[]) {
     options.forEach(option => {
@@ -51,19 +64,7 @@ constructor(
       this.agregarOpciones(this.paisSelect, continente.paises);
     }
   }
-  ngOnInit() {
-    
-    // Cargar los datos desde un archivo JSON o una API
-    this.dataService.getDestinos().subscribe(data => {
-      this.destinos = data; // Asigna los datos a la propiedad destinos
-    });
-    // Cargar los datos desde un archivo JSON o una API
-    this.dataService.getActividades().subscribe(data => {
-      this.items = data; // Asigna los datos a la propiedad items
-    }); 
-  }
- 
-  ionViewDidEnter() {
+  initializeSelectors() {
     // Obtener los selectores
     this.continenteSelect = document.getElementById('continente') as HTMLIonSelectElement;
     this.paisSelect = document.getElementById('pais') as HTMLIonSelectElement;

@@ -2,8 +2,8 @@
   <ion-toolbar  color="primary">
     <ion-buttons slot="start">
     <img src="../../assets/logotravel.png" />
-    <ion-button size="large" routerLink="/mensajes">
-      <ion-icon slot="icon-only" ios="mail" md="settings-sharp"></ion-icon>
+    <ion-button size="large" routerLink="/votacion">
+      <ion-icon slot="icon-only" ios="star-half" md="settings-sharp"></ion-icon>
     </ion-button>
     <ion-menu-button></ion-menu-button>
     </ion-buttons>
@@ -28,7 +28,7 @@
         <ion-accordion-group>
           <ion-accordion value="first">
             <ion-item slot="header" color="light">
-              <ion-label>Filters</ion-label>
+              <ion-label>Filtros</ion-label>
             </ion-item>
             <div class=" " slot="content">                    
               <ion-list>
@@ -96,6 +96,8 @@
               <p><ion-icon aria-hidden="true" slot="start" ios="restaurant" md="restaurant-sharp"></ion-icon> {{ getRestaurantNombre(viaje.id_restaurantes) }}</p>  
               <hr> 
               <p><ion-icon aria-hidden="true" slot="start" ios="balloon" md="balloon-sharp"></ion-icon> {{ getActividadNombre(viaje.id_actividades) }}</p> 
+              <ion-button *ngIf="viaje.id_viaje" color="secondary" (click)="gotodetalle(viaje.id_viaje)">Ver detalle</ion-button>
+
             </ion-card-content>
           </ion-card> 
               

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { UtilsService } from '../utils.service'; // Adjust the path as needed
 import { DataService } from '../services/data.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-misviajes',
@@ -17,9 +18,11 @@ export class MisviajesPage implements OnInit {
   public alojamientos: any[] = []; // Define la propiedad destinos
   public actividades: any[] = []; // Define la propiedad viajes
   public restaurantes: any[] = []; // Define la propiedad viajes
+  public selectedViajeId: number | undefined;
 
   constructor(
     private dataService: DataService,
+    private router: Router,
     public utils: UtilsService, 
     private http: HttpClient) { }
 
@@ -109,6 +112,16 @@ export class MisviajesPage implements OnInit {
 
   return nombres.join(', '); // Join names with a comma and space
   } 
+  
+  gotodetalle(viajeId: number | undefined) {
+    if (viajeId !== undefined) {
+      this.router.navigate(['/detalle', viajeId]);
+    } else {
+      console.error('viajeId is undefined');
+    }
   }
+  
+}
 
 
+ 

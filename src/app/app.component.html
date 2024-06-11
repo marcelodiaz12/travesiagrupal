@@ -1,5 +1,5 @@
 <ion-app>
-  <ion-split-pane contentId="main-content">
+  <ion-split-pane contentId="main-content" *ngIf="currentUser">
     <ion-menu contentId="main-content" type="overlay">
       <ion-content>
         <ion-list id="inbox-list">
@@ -13,13 +13,12 @@
             </ion-item>
           </ion-menu-toggle>
           <div style="padding: 0 15px;background:#354d61;">
-            <ion-button color="danger" style="width:100%;text-align:center;" routerLink="/login" >Cerrar sesion</ion-button>
+            <ion-button color="danger" style="width:100%;text-align:center;"  (click)="logout()" >Cerrar sesion</ion-button>
           </div>
         </ion-list> 
       </ion-content>
     </ion-menu>
-    <ion-router-outlet id="main-content">
-      
-    </ion-router-outlet>
+    <ion-router-outlet id="main-content">    </ion-router-outlet>
   </ion-split-pane>
+  <ion-router-outlet id="main-content"  *ngIf="!currentUser">    </ion-router-outlet> 
 </ion-app>

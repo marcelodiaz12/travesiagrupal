@@ -2,8 +2,8 @@
   <ion-toolbar  color="primary">
     <ion-buttons slot="start">
     <img src="../../assets/logotravel.png" />
-    <ion-button size="large" routerLink="/mensajes">
-      <ion-icon slot="icon-only" ios="mail" md="settings-sharp"></ion-icon>
+    <ion-button size="large" routerLink="/votacion">
+      <ion-icon slot="icon-only" ios="star-half" md="settings-sharp"></ion-icon>
     </ion-button>
     <ion-menu-button></ion-menu-button>
     </ion-buttons>
@@ -15,143 +15,63 @@
 
   <div id="container">
    
-    <section class="paddinghor  "> 
+    <section class="   "> 
+       
       <div class="flexhor sectionTitle">
         <div>
-          <h2>Viaje a cancun</h2>  
+          <h2>
+          <ion-icon name="star-half"></ion-icon>
+          Votaciones</h2> 
         </div> 
-        <div>
-          <ion-button size="large"  routerLink="/detalle">
-            <ion-icon slot="icon-only" ios="arrow-back" md="settings-sharp"></ion-icon>
-          </ion-button>
-        </div>
       </div>
-      <div> 
-      <ion-radio-group value="strawberries">
-        <table class="voting">
-          <tr>
-            <th colspan="3">Vuelos</th> 
-          </tr>
-          <tr>
-              <td>
-                <ion-radio></ion-radio>
-              </td>  
-              <td>
-                <ion-radio></ion-radio>
-              </td> 
-              <td>
-                <ion-radio></ion-radio>
-              </td> 
-          </tr>
-          <tr>
-            <td>Qantas</td>  
-            <td>LAN</td> 
-            <td>JETSTAR</td> 
-          </tr>
-        </table>
-            </ion-radio-group>
+      <div>
+        <h3 class="subsubtitle">Selecciona un viaje:  </h3> 
+        <ion-select  class="paddinghor" label="Viaje" label-placement="Floating" placeholder="Seleccione viaje" id="viaje" [(ngModel)]="selectedViajeId" (ionChange)="onViajeChange($event)">
+          <ion-select-option *ngFor="let viaje of viajes" [value]="viaje.id_viaje"> 
+              {{ getDestinoNombre(viaje.id_ubicacion) }}
+          </ion-select-option>
+        </ion-select>
       </div>
-      <div> 
-        <ion-radio-group value="strawberries">
-        <table class="voting">
-          <tr>
-            <th colspan="3">Hoteles</th> 
-          </tr>
-          <tr>
-              <td>
-                <ion-radio></ion-radio>
-              </td>  
-              <td>
-                <ion-radio></ion-radio>
-              </td> 
-              <td>
-                <ion-radio></ion-radio>
-              </td> 
-          </tr>
-          <tr>
-            <td>Sheraton</td>  
-            <td>Ritz</td>    
-            <td>Holliday</td> 
-          </tr>
-        </table>
-      </ion-radio-group>
+      <div class=" " *ngIf="selectedViaje">   
+        <h3 class="subsubtitle">Vota por un restaurante:  </h3> 
+
+
+        <ion-card *ngFor="let restaurante of selectedRestaurantes; let i = index">
+          <img alt="{{ restaurante.nombre }}" src="{{ restaurante.foto }}" />
+          <ion-card-header>
+            <ion-card-title>{{ restaurante.nombre }}</ion-card-title>
+            <ion-card-subtitle>
+              <ion-icon *ngFor="let star of utils.getStars(restaurante.valoracion)" name="star"></ion-icon>
+              <span *ngFor="let precio of utils.getStars(restaurante.precio)">$</span></ion-card-subtitle>
+          </ion-card-header>
+        
+          <ion-card-content>
+            {{ restaurante.descripcion }}
+            <p><ion-checkbox> </ion-checkbox></p>
+          </ion-card-content>
+        </ion-card>
+
+        <h3 class="subsubtitle">Vota por las Actividades:  </h3> 
+
+
+
+        <ion-card *ngFor="let actividad of selectedActividades; let i = index">
+          <img alt="{{ actividad.nombre }}" src="{{ actividad.foto }}" />
+          <ion-card-header>
+            <ion-card-title>{{ actividad.nombre }}</ion-card-title>
+            <ion-card-subtitle>
+              <ion-icon *ngFor="let star of utils.getStars(actividad.valoracion)" name="star"></ion-icon>
+              <span *ngFor="let precio of utils.getStars(actividad.precio)">$</span></ion-card-subtitle>
+          </ion-card-header>
+        
+          <ion-card-content>
+            {{ actividad.descripcion }}
+            <p><ion-checkbox> </ion-checkbox></p>
+          </ion-card-content>
+        </ion-card>
+ 
+      <ion-button color="secondary"  (click)="gotodetalle()">Votar</ion-button>
       </div>
-      <div> 
-        <ion-radio-group value="strawberries">
-        <table class="voting">
-          <tr>
-            <th colspan="3">Actividades</th> 
-          </tr>
-          <tr>
-              <td>
-                <ion-radio></ion-radio>
-              </td>  
-              <td>
-                <ion-radio></ion-radio>
-              </td> 
-              <td>
-                <ion-radio></ion-radio>
-              </td> 
-          </tr>
-          <tr>
-            <td>Paseo</td>  
-            <td>Fiesta</td>  
-            <td>Tour</td> 
-          </tr>
-        </table>
-      </ion-radio-group>
-      </div>
-      <div> 
-        <ion-radio-group value="strawberries">
-        <table class="voting">
-          <tr>
-            <th colspan="3">Restaurantes</th> 
-          </tr>
-          <tr>
-              <td>
-                <ion-radio></ion-radio>
-              </td>  
-              <td>
-                <ion-radio></ion-radio>
-              </td> 
-              <td>
-                <ion-radio></ion-radio>
-              </td> 
-          </tr>
-          <tr>
-            <td>Rest 1</td>  
-            <td>Rest 2</td>  
-            <td>Rest 3</td> 
-          </tr>
-        </table>
-      </ion-radio-group>
-      </div>
-      <div> 
-        <ion-radio-group value="strawberries">
-        <table class="voting">
-          <tr>
-            <th colspan="3">Transporte</th> 
-          </tr>
-          <tr>
-              <td>
-                <ion-radio></ion-radio>
-              </td>  
-              <td>
-                <ion-radio></ion-radio>
-              </td> 
-              <td>
-                <ion-radio></ion-radio>
-              </td> 
-          </tr>
-          <tr>
-            <td>BUS</td>  
-            <td>BOTE</td>  
-            <td>CABALLO</td> 
-          </tr>
-        </table>
-      </ion-radio-group>
-      </div>
-      <ion-button color="secondary"  routerLink="/detalle">Votar</ion-button>
     </section> 
   </div>
 </ion-content>

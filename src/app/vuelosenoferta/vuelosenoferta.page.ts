@@ -60,6 +60,7 @@ export class VuelosenofertaPage implements OnInit {
     this.dataService.getVuelos().subscribe(data => {
       this.items = data; // Asigna los datos a la propiedad items
     });
+    this.ionViewDidEnter();
   }
 
   ionViewDidEnter() {
